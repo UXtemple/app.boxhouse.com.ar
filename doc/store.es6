@@ -20,6 +20,10 @@ export default class DocStore extends Store {
     return this.state.docs.toArray();
   }
 
+  boxId(boxId) {
+    return this.state.docs.filter(doc => doc.boxId === boxId);
+  }
+
   id(id) {
     return this.state.docs.find(doc => doc.id === id);
   }

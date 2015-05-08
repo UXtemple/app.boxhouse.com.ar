@@ -31,7 +31,7 @@
   "dependencies": {
     "flummox": "^4.0.0-alpha",
     "immutable": "^3.7.2",
-    "panels-ui": "^0.1.0",
+    "panels-ui": "^0.1.1",
     "react": "^0.13.2"
   },
   "devDependencies": {

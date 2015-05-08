@@ -1,13 +1,32 @@
-import { Container as DocContainer } from '../../doc/web';
+import DocAdd from '../../doc/web/add/component';
+import { Container as DocContainer } from '../../doc/web/doc';
+import { Container as DocsContainer } from '../../doc/web/docs';
 import { DocRecord } from '../../doc/records';
-import { Panel } from 'panels-ui'
+import { Panels, Panel } from 'panels-ui'
 import React from 'react';
 
 export default class App extends React.Component {
   render() {
-    let docs = this.props.docs.map(doc => <DocContainer id={doc.id} key={doc.id} />);
+    let boxId = 1;
+    let docId = 1;
 
-    return <Panel style={{fontSize: 16}}>{docs}</Panel>;
+    let boxes = <div>Here go the boxes</div>
+
+        // <DocAdd boxId={boxId} />
+    let docs = (
+      <DocsContainer boxId={boxId} />
+    );
+    // let doc = <DocContainer id={docId} />;
+
+    let doc = <DocAdd boxId={boxId} />
+
+    return (
+      <Panels>
+        <Panel>{boxes}</Panel>
+        <Panel>{docs}</Panel>
+        <Panel>{doc}</Panel>
+      </Panels>
+    );
   }
 }
 

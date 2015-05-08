@@ -9,7 +9,7 @@ const DUMMY_DATA = [{
     from: 3320,
     to: 3345
   },
-  boxId: 401,
+  boxId: 1,
   companyId: 1,
   office: 'Devoto'
 }, {
@@ -23,7 +23,7 @@ const DUMMY_DATA = [{
     from: 3170,
     to: 3195
   },
-  boxId: 401,
+  boxId: 1,
   companyId: 1,
   office: 'Brinkmann'
 }, {
@@ -37,7 +37,7 @@ const DUMMY_DATA = [{
     from: 2072,
     to: 2097
   },
-  boxId: 401,
+  boxId: 1,
   companyId: 1,
   office: 'Galvez'
 }];

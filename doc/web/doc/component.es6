@@ -1,4 +1,4 @@
-import DocRecord from '../records/doc';
+import DocRecord from '../../records/doc';
 import React from 'react';
 
 class LabelValue extends React.Component {
@@ -20,8 +20,8 @@ LabelValue.propTypes = {
 export default class Doc extends React.Component {
   render() {
     return (
-      <div style={{borderTop: '1px solid black', width: '100%'}}>
-        <div>{this.props.doc.type}</div>
+      <div>
+        <h1>{this.props.doc.type}</h1>
         <div>{this.props.doc.office}</div>
 
         <div>Fecha</div>
@@ -31,9 +31,6 @@ export default class Doc extends React.Component {
         <div>Número</div>
         <LabelValue label='desde' value={this.props.doc.number.from} />
         <LabelValue label='hasta' value={this.props.doc.number.to} />
-
-        <LabelValue label='caja' value={this.props.doc.boxId} />
-        <LabelValue label='empresa' value={this.props.doc.companyId} />
       </div>
     );
   }
