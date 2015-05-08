@@ -20,7 +20,7 @@ LabelValue.propTypes = {
 export default class Doc extends React.Component {
   render() {
     return (
-      <div style={{border: '1px solid black', width: 360}}>
+      <div style={{borderTop: '1px solid black', width: '100%'}}>
         <div>{this.props.doc.type}</div>
         <div>{this.props.doc.office}</div>
 
