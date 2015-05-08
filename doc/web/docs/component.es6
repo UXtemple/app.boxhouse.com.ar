@@ -16,7 +16,7 @@ export default class Docs extends React.Component {
   getCard(doc) {
     let href = `/box-1/doc-${doc.id}`;
 
-    return <ActionBlock href={href} key={doc.id} style={style}>Doc {doc.id}</ActionBlock>;
+    return <ActionBlock href={href} key={doc.id} style={style}>{doc.office}</ActionBlock>;
   }
 
   render() {

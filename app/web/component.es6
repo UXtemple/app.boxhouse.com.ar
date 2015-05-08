@@ -18,7 +18,7 @@ export default class App extends React.Component {
     );
     // let doc = <DocContainer id={docId} />;
 
-    let doc = <DocAdd boxId={boxId} />
+    let doc = <DocAdd boxId={boxId} flux={this.props.flux} />
 
     return (
       <Panels>

@@ -11,6 +11,7 @@ export default class DocStore extends Store {
     super();
 
     const docActionIds = flux.getActionIds('doc');
+    this.register(docActionIds.add, this.add);
     this.register(docActionIds.loadDocs, this.loadDocs);
 
     this.state = new StateRecord();
@@ -26,6 +27,10 @@ export default class DocStore extends Store {
 
   id(id) {
     return this.state.docs.find(doc => doc.id === id);
+  }
+
+  add(doc) {
+    this.setState(this.state.set('docs', this.state.docs.push(doc)));
   }
 
   loadDocs(docs) {
