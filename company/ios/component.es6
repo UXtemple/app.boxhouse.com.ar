@@ -1,11 +1,12 @@
 import CardRecord from '../records/card';
-import React from 'react';
+let React = require('react-native');
+let { Text, ScrollView } = React;
 
 export default class Feed extends React.Component {
   render() {
-    let cards = this.props.cards.map(card => <div key={card.id}>{JSON.stringify(card)}</div>);
+    let cards = this.props.cards.map(card => <Text>{JSON.stringify(card)}</Text>);
 
-    return <div>{cards}</div>;
+    return <ScrollView>{cards}</ScrollView>;
   }
 }
 

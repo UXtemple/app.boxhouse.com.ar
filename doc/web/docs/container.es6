@@ -1,5 +1,5 @@
 import Component from './component';
-import FluxComponent from 'flummox/component';
+import FluxComponent from 'flummox/component/web';
 import React from 'react';
 
 export default class DocContainer extends React.Component {

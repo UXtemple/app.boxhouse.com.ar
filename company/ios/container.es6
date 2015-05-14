@@ -1,6 +1,6 @@
 import Component from './component';
-import FluxComponent from 'flummox/component';
-import React from 'react';
+import FluxComponent from 'flummox/native-component';
+let React = require('react-native');
 
 export default class FeedContainer extends React.Component {
   get stores() {

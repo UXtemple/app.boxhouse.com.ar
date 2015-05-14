@@ -1,8 +1,8 @@
 import { Actions } from 'flummox';
-import { CardRecord } from './records';
+import { BoxRecord } from './records';
 
 export default class FeedActions extends Actions {
-  loadCards(cards) {
-    return cards.map(card => new CardRecord(card));
+  loadBoxes(boxes) {
+    return boxes.map(box => new BoxRecord(box));
   }
 }

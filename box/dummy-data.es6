@@ -1,15 +1,27 @@
 const DUMMY_DATA = [{
-  type: 'box',
-  id: 2
+  id: 1,
+  documentCount: 4,
+  position: {
+    shelf: 1,
+    rack: 1,
+    height: 1,
+    position: 1,
+    depth: 1
+  },
+  full: true,
+  companyId: 1
 }, {
-  type: 'document',
-  id: 2
-}, {
-  type: 'box',
-  id: 1
-}, {
-  type: 'document',
-  id: 1
+  id: 2,
+  documentCount: 3,
+  position: {
+    shelf: 1,
+    rack: 1,
+    height: 1,
+    position: 1,
+    depth: 2
+  },
+  full: false,
+  companyId: 1
 }];
 
 export default DUMMY_DATA;

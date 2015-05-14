@@ -2,7 +2,7 @@ import { List } from 'immutable';
 import { StateRecord } from './records';
 import { Store } from 'flummox';
 
-export default class FeedStore extends Store {
+export default class BoxStore extends Store {
   static assignState(oldState, newState) {
     return newState;
   }
@@ -10,17 +10,25 @@ export default class FeedStore extends Store {
   constructor(flux) {
     super();
 
-    const feedActionIds = flux.getActionIds('feed');
-    this.register(feedActionIds.loadCards, this.loadCards);
+    const boxActionIds = flux.getActionIds('box');
+    this.register(boxActionIds.loadBoxes, this.loadBoxes);
 
     this.state = new StateRecord();
   }
 
-  get cards() {
-    return this.state.cards.toArray();
+  id(id) {
+    return this.state.boxes.find(box => box.id === id);
   }
 
-  loadCards(cards) {
-    this.setState(this.state.set('cards', List(cards)));
+  get boxes() {
+    return this.state.boxes.toArray();
+  }
+
+  loadBoxes(boxes) {
+    this.setState(this.state.set('boxes', List(boxes)));
+  }
+
+  companyId(companyId) {
+    return this.state.boxes.filter(box => box.companyId === companyId);
   }
 }

@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-./node_modules/.bin/babel $1 --ignore 'ios/**,node_modules/**,playground/web/playground.es6,__tests__/**,**/__tests__/**,playground/ios/**' --extensions .es6 --out-dir . .
+COMPILE_IGNORE='ios/**,node_modules/**,playground/web/playground.es6,__tests__/**,**/__tests__/**,playground/ios/**'
+
+./node_modules/.bin/babel $1 --ignore $COMPILE_IGNORE --extensions .es6 --out-dir . .

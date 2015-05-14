@@ -2,14 +2,18 @@ import Component from './component';
 import FluxComponent from 'flummox/component/web';
 import React from 'react';
 
-export default class AppContainer extends React.Component {
+export default class BoxesFeedContainer extends React.Component {
   get stores() {
     return {
-      doc: store => ({docs: store.all})
+      box: store => ({boxes: store.companyId(this.props.companyId)})
     };
   }
 
   render() {
     return <FluxComponent connectToStores={this.stores}><Component /></FluxComponent>;
   }
+}
+
+BoxesFeedContainer.propTypes = {
+  companyId: React.PropTypes.number.isRequired
 }
