@@ -2,7 +2,7 @@ import BOX_DUMMY_DATA from '../../box/dummy-data';
 import COMPANY_DUMMY_DATA from '../../company/dummy-data';
 import DOC_DUMMY_DATA from '../../doc/dummy-data';
 import * as Flummox from 'flummox';
-import FluxComponent from 'flummox/component/web';
+import FluxComponent from 'flummox/component';
 import * as Boxhouse from '../../index';
 import { Container as AppContainer } from '../../app/web';
 import React from 'react';

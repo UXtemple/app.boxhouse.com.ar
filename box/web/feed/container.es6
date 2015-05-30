@@ -1,5 +1,5 @@
 import Component from './component';
-import FluxComponent from 'flummox/component/web';
+import FluxComponent from 'flummox/component';
 import React from 'react';
 
 export default class BoxesFeedContainer extends React.Component {

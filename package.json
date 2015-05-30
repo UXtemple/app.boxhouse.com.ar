@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": ".bin/test",
-    "prepublish": ".bin/compile",
-    "postpublish": ".bin/clean",
+    "prepublish": "if [ \"$NODE_ENV\" = production  ]; then .bin/compile; fi",
+    "postpublish": "if [ \"$NODE_ENV\" = production   ]; then .bin/clean; fi",
     "start": ".bin/start"
   },
   "repository": {
@@ -30,19 +30,19 @@
   "homepage": "https://github.com/UXtemple/boxhouse",
   "dependencies": {
     "flummox": "^4.0.0-alpha2",
-    "immutable": "^3.7.2",
-    "panels-ui": "^0.1.1",
+    "immutable": "^3.7.3",
+    "panels-ui": "^0.1.6",
     "react": "^0.13.3"
   },
   "devDependencies": {
-    "babel": "^5.3.3",
-    "babelify": "^6.1.0",
-    "browserify": "^10.2.0",
+    "babel": "^5.4.7",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.3",
     "envify": "^3.4.0",
     "livereloadify": "^2.0.0",
-    "mocha": "^2.2.4",
+    "mocha": "^2.2.5",
     "node-static": "^0.7.6",
-    "react-native": "^0.4.2",
+    "react-native": "^0.4.4",
     "sinon": "^1.14.1",
     "watchify": "^3.2.1"
   },

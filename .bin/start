@@ -7,7 +7,7 @@ WEB=./playground/web
 ./node_modules/.bin/watchify --no-bundle-external --extension .es6 -o $WEB/playground.js -v -d $WEB/playground.es6 &
 ./node_modules/.bin/watchify `.bin/extract-dependencies` \
   -r react/addons \
-  -r flummox/component/web \
+  -r flummox/component \
   -r panels-ui/blocks -v -o $WEB/vendor.js ./package.json &
 ./node_modules/.bin/livereloadify $WEB &
 ./node_modules/.bin/static $WEB --port 3000 --cache 0
