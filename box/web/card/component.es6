@@ -13,10 +13,12 @@ export default class BoxCard extends React.Component {
             <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
             <div style={style.documentCount.label}>documents inside</div>
           </ActionBlock>
-          <div>
-            <div>DELETE</div>
-            <div>{this.props.box.full ? 'FULL' : 'FREE'}</div>
-            <div>+</div>
+          <div style={style.toolsBorder}>
+            <div style={style.tools}>
+              <div style={style.delete}>DELETE</div>
+              <div>{this.props.box.full ? 'FULL' : 'FREE'}</div>
+              <div>+</div>
+            </div>
           </div>
         </div>
         <div style={style.position}>
@@ -40,15 +42,18 @@ const style = {
     alignItems: 'center'
   },
   box: {
-    backgroundColor: 'green',
+    //backgroundImage: 'linear-gradient(135deg, #00BD70, #00D17C)',
+    backgroundColor: '#00D17C',
     borderRadius: 5,
     color: 'white',
-    width: '75%'
+    width: '65%',
+    //height: '200px'
   },
   action: {
     base: {
       color: 'white',
       flexDirection: 'column',
+      flexWrap: 'wrap',
       margin: 25,
       padding: 0,
       width: 'auto'
@@ -58,10 +63,12 @@ const style = {
   },
   documentCount: {
     number: {
-      fontSize: 50
+      fontSize: 50,
+      width: '100%'
     },
     label: {
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      width: '100%'
     }
   },
   position: {
@@ -71,8 +78,22 @@ const style = {
     width: '100%'
   },
   tools: {
-      // flex-direction: row;
-      //   align-content: stretch;
-      //     text-align: center;
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
+    margin: '25px 0px 25px 0px'
+  },
+  toolsBorder: {
+    borderTop: 'solid',
+    borderTopWidth: 1,
+    margin: '0px 25px 0px 25px'
   }
 }
+
+
+
+
+
+
+
+
