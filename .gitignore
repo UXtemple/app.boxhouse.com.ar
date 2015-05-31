@@ -3,6 +3,8 @@ node_modules
 *.log
 **.js
 
+!icons
+
 playground/ios/node_modules
 !playground/ios/index.ios.js
 

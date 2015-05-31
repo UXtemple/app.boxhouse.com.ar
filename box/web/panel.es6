@@ -2,10 +2,11 @@ import { Container as BoxesFeed } from './feed';
 import { Card as CompanyCard } from '../../company/web';
 import { Panel } from 'panels-ui';
 import React from 'react';
+import SearchIcon from '../../icons/search';
 
 class Search extends React.Component  {
   render() {
-    return <div>Search</div>;
+    return <div><SearchIcon fill={{active: 'red', base: 'blue'}} width='100' height='100' /></div>;
   }
 }
 
