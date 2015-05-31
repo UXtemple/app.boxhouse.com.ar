@@ -10,15 +10,18 @@ export default class BoxCard extends React.Component {
       <div style={style.card}>
         <div style={style.box}>
           <ActionBlock href={uri} style={style.action}>
-            <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
-            <div style={style.documentCount.label}>documents inside</div>
-          </ActionBlock>
-          <div style={style.toolsBorder}>
-            <div style={style.tools}>
-              <div style={style.delete}>DELETE</div>
-              <div>{this.props.box.full ? 'FULL' : 'FREE'}</div>
-              <div>+</div>
+            <div style={style.documentCount.wrapper}>
+              <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
+              <div style={style.documentCount.label}>documents inside</div>
             </div>
+            <div style={style.arrow}>
+              <div>></div>
+            </div>
+          </ActionBlock>
+          <div style={style.tools}>
+            <div style={style.tool}>DELETE</div>
+            <div style={style.tool}>{this.props.box.full ? 'FULL' : 'FREE'}</div>
+            <div style={style.tool}>+</div>
           </div>
         </div>
         <div style={style.position}>
@@ -39,61 +42,58 @@ BoxCard.propTypes = {
 
 const style = {
   card: {
-    alignItems: 'center'
+    alignItems: 'center',
+    background: 'linear-gradient(to bottom, #F7E4BF, #D4C2A3)',
+    marginTop: 25
   },
   box: {
-    //backgroundImage: 'linear-gradient(135deg, #00BD70, #00D17C)',
-    backgroundColor: '#00D17C',
+    background: 'linear-gradient(135deg, #66ed8c, #00bd70, #00bd70)',
     borderRadius: 5,
     color: 'white',
-    width: '65%',
-    //height: '200px'
+    width: '65%'
   },
   action: {
     base: {
-      color: 'white',
-      flexDirection: 'column',
-      flexWrap: 'wrap',
-      margin: 25,
-      padding: 0,
-      width: 'auto'
+      flexDirection: 'row',
+      padding: 25
     },
     active: {
     }
   },
+  arrow: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   documentCount: {
     number: {
       fontSize: 50,
-      width: '100%'
+      lineHeight: '50px',
     },
     label: {
       textTransform: 'uppercase',
-      width: '100%'
+    },
+    wrapper: {
+      color: 'white',
+      flexDirection: 'column',
+      flex: 1
     }
   },
   position: {
     backgroundColor: 'white',
     flexDirection: 'row',
-    margin: '10px 0 10px 30px',
+    padding: '10px 0 10px 25px',
     width: '100%'
   },
   tools: {
+    borderTop: '1px solid rgba(255,255,255,0.3)',
+    margin: '0px 25px',
     flexDirection: 'row',
     alignItems: 'stretch',
-    justifyContent: 'space-between',
-    margin: '25px 0px 25px 0px'
+    justifyContent: 'space-between'
   },
-  toolsBorder: {
-    borderTop: 'solid',
-    borderTopWidth: 1,
-    margin: '0px 25px 0px 25px'
+  tool: {
+    alignItems: 'center',
+    padding: '25px 0',
+    width: '33%'
   }
 }
-
-
-
-
-
-
-
-
