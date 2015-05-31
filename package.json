@@ -32,8 +32,7 @@
     "flummox": "^4.0.0-alpha2",
     "immutable": "^3.7.3",
     "panels-ui": "^0.1.6",
-    "react": "^0.13.3",
-    "react-inlinesvg": "^0.4.1"
+    "react": "^0.13.3"
   },
   "devDependencies": {
     "babel": "^5.4.7",
