@@ -2,14 +2,18 @@ import Component from './component';
 import FluxComponent from 'flummox/component';
 import React from 'react';
 
-export default class DocContainer extends React.Component {
+export default class BoxPositionContainer extends React.Component {
   get stores() {
     return {
-      doc: store => ({docs: store.boxId(this.props.boxId)})
+      box: store => ({box: store.id(this.props.id)})
     };
   }
 
   render() {
     return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component {...this.props} /></FluxComponent>;
   }
+}
+
+BoxPositionContainer.propTypes = {
+  id: React.PropTypes.number.isRequired
 }
