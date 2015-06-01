@@ -96,6 +96,7 @@ const style = {
       lineHeight: '50px',
     },
     label: {
+      fontSize: 15,
       textTransform: 'uppercase',
     },
     wrapper: {
@@ -125,6 +126,7 @@ const style = {
   switch: {
     alignItems: 'center',
     padding: '25px 0',
+    fontSize: 15,
     width: '30%'
   },
   separator: {
@@ -132,4 +134,5 @@ const style = {
     margin: '25px 2.25%',
     width: '0.5%'
   }
+
 }
