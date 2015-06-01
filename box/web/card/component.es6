@@ -55,9 +55,17 @@ export default class BoxCard extends React.Component {
   render() {
     let uri = `/box-${this.props.box.id}`;
 
+    let boxStyle = style.box;
+    if (this.props.box.full) {
+      boxStyle = {
+        ...boxStyle,
+        ...style.boxFull
+      };
+    }
+
     return (
       <div style={style.card}>
-        <div style={style.box}>
+        <div style={boxStyle}>
           <ActionBlock href={uri} style={style.action}>
             <div style={style.documentCount.wrapper}>
               <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
@@ -109,6 +117,9 @@ const style = {
     borderRadius: 5,
     color: 'white',
     width: '65%'
+  },
+  boxFull: {
+    background: 'linear-gradient(135deg, #66ed8c, red, #00bd70)'
   },
   action: {
     base: {
