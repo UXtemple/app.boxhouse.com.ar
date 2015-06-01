@@ -1,5 +1,8 @@
 import { ActionBlock } from 'panels-ui/blocks';
 import React from 'react';
+import ArrowIcon from '../../../icons/arrow';
+
+
 
 export default class BoxAction extends React.Component {
   render() {
@@ -9,9 +12,7 @@ export default class BoxAction extends React.Component {
           <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
           <div style={style.documentCount.label}>documents inside</div>
         </div>
-        <div style={style.arrow}>
-          <div>></div>
-        </div>
+        <ArrowIcon style={style.arrow} />
       </ActionBlock>
     );
   }
@@ -21,15 +22,16 @@ export default class BoxAction extends React.Component {
 const style = {
   action: {
     base: {
+      alignItems: 'center',
       flexDirection: 'row',
-      padding: 25
+      padding: '25px 35px 25px 25px'
     },
     active: {
     }
   },
   arrow: {
-    alignItems: 'center',
-    justifyContent: 'center'
+    height: 30,
+    width: 30
   },
   documentCount: {
     number: {

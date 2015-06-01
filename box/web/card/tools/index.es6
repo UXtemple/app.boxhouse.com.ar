@@ -26,6 +26,7 @@ const style = {
     justifyContent: 'space-between'
   },
   tool: {
+    //alignContent: 'center',
     alignItems: 'center',
     padding: '25px 0',
     width: '30%'

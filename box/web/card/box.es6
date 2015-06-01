@@ -29,6 +29,6 @@ const style = {
     width: '65%'
   },
   boxFull: {
-    background: 'linear-gradient(135deg, #66ed8c, red, #00bd70)'
+    background: 'linear-gradient(135deg, #FFC094, #E99F6C, #E99F6C)'
   }
 }
