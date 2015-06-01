@@ -3,30 +3,46 @@ import { Card as CompanyCard } from '../../company/web';
 import { Panel } from 'panels-ui';
 import React from 'react';
 import SearchIcon from '../../icons/search';
+import PlusIcon from '../../icons/plus';
 
 class Search extends React.Component  {
   render() {
-    return <div><SearchIcon fill={{active: 'red', base: 'blue'}} width='100' height='100' /></div>;
+    return <SearchIcon fill={{active: '#00b3e3', base: '#231f20'}} width='35' height='35' />;
   }
 }
 
 class AddBox extends React.Component  {
   render() {
-    return <div>AddBox</div>;
+    return <PlusIcon fill={{active: '#00b3e3', base: '#231f20'}} width='35' height='35' />;
   }
 }
 
 export default class BoxesPanel extends React.Component {
   render() {
     return (
-      <Panel>
+      <Panel style={style.panel}>
         <CompanyCard id={1} />
-
-        <Search />
-        <AddBox />
+        <div style={style.tools}>
+          <Search />
+          <AddBox />
+        </div>
 
         <BoxesFeed companyId={1} />
       </Panel>
     )
+  }
+}
+
+const style= {
+  tools: {
+    alignSelf: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+    margin: '25px 0 25px 0',
+    width: 80
+  },
+  panel: {
+    backgroundColor: '#F7E4BF'
   }
 }

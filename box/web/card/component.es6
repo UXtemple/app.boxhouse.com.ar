@@ -1,11 +1,18 @@
 import { ActionBlock } from 'panels-ui/blocks';
 import { BoxRecord } from '../../records';
 import React from 'react';
+import DeleteIcon from '../../../icons/delete';
+
+class Delete extends React.Component  {
+  render() {
+    return <DeleteIcon style={this.props.style} fill={{active: 'rgba(255,255,255,0.5)', base: 'white'}} width='35' height='35' />;
+  }
+}
 
 export default class BoxCard extends React.Component {
   render() {
     let uri = `/box-${this.props.box.id}`;
-
+    
     return (
       <div style={style.card}>
         <div style={style.box}>
@@ -19,7 +26,7 @@ export default class BoxCard extends React.Component {
             </div>
           </ActionBlock>
           <div style={style.tools}>
-            <div style={style.tool}>DELETE</div>
+            <Delete style={style.tool}/>
             <div style={style.tool}>{this.props.box.full ? 'FULL' : 'FREE'}</div>
             <div style={style.tool}>+</div>
           </div>
@@ -43,7 +50,7 @@ BoxCard.propTypes = {
 const style = {
   card: {
     alignItems: 'center',
-    background: 'linear-gradient(to bottom, #F7E4BF, #D4C2A3)',
+    background: 'linear-gradient(to bottom, #F7E4BF, #C7B699)',
     marginTop: 25
   },
   box: {
@@ -79,7 +86,7 @@ const style = {
     }
   },
   position: {
-    backgroundColor: 'white',
+    backgroundColor: '#f2f2f2',
     flexDirection: 'row',
     padding: '10px 0 10px 25px',
     width: '100%'
