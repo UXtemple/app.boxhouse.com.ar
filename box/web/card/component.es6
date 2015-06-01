@@ -2,10 +2,24 @@ import { ActionBlock } from 'panels-ui/blocks';
 import { BoxRecord } from '../../records';
 import React from 'react';
 import DeleteIcon from '../../../icons/delete';
+import SwitchOnIcon from '../../../icons/switch-on';
+import SwitchOffIcon from '../../../icons/switch-off';
 
 class Delete extends React.Component  {
   render() {
     return <DeleteIcon style={this.props.style} fill={{active: 'rgba(255,255,255,0.5)', base: 'white'}} width='35' height='35' />;
+  }
+}
+
+class Switch extends React.Component  {
+  render() {
+    const props = {
+      style: this.props.style, 
+      fill: {active: 'rgba(255,255,255,0.5)', base: 'white'},
+      width: 35,
+      height: 20
+    }
+    return this.props.on ? <SwitchOnIcon {...props}/> : <SwitchOffIcon {...props}/>
   }
 }
 
@@ -27,7 +41,12 @@ export default class BoxCard extends React.Component {
           </ActionBlock>
           <div style={style.tools}>
             <Delete style={style.tool}/>
-            <div style={style.tool}>{this.props.box.full ? 'FULL' : 'FREE'}</div>
+            <div style={style.separator}/>
+            <div style={style.switch}>
+              <Switch on={this.props.box.full} />
+              <div>{this.props.box.full ? 'FULL' : 'FREE'}</div>
+            </div>
+            <div style={style.separator}/>
             <div style={style.tool}>+</div>
           </div>
         </div>
@@ -101,6 +120,16 @@ const style = {
   tool: {
     alignItems: 'center',
     padding: '25px 0',
-    width: '33%'
+    width: '30%'
+  },
+  switch: {
+    alignItems: 'center',
+    padding: '25px 0',
+    width: '30%'
+  },
+  separator: {
+    backgroundColor: 'rgba(255,255,255,0.3)',
+    margin: '25px 2.25%',
+    width: '0.5%'
   }
 }
