@@ -12,6 +12,7 @@ export default class BoxStore extends Store {
 
     const boxActionIds = flux.getActionIds('box');
     this.register(boxActionIds.loadBoxes, this.loadBoxes);
+    this.register(boxActionIds.toggleFull, this.toggleFull);
 
     this.state = new StateRecord();
   }
@@ -26,6 +27,18 @@ export default class BoxStore extends Store {
 
   loadBoxes(boxes) {
     this.setState(this.state.set('boxes', List(boxes)));
+  }
+
+  toggleFull(id) {
+    const boxes = this.state.get('boxes');
+
+    const boxIndex = boxes.findIndex(b => b.id === id);
+    const box = boxes.get(boxIndex);
+
+    const newBox = box.set('full', !box.full);
+    const newBoxes = boxes.set(boxIndex, newBox);
+
+    this.setState(this.state.set('boxes', newBoxes));
   }
 
   companyId(companyId) {

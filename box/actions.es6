@@ -5,4 +5,8 @@ export default class FeedActions extends Actions {
   loadBoxes(boxes) {
     return boxes.map(box => new BoxRecord(box));
   }
+
+  toggleFull(id) {
+    return id;
+  }
 }

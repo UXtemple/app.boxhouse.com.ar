@@ -5,19 +5,12 @@ const style = {
 }
 
 export default class SwitchOffIcon extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false
-    };
-  }
-
   render() {
     const {height, width} = this.props;
-    let fill = this.props.fill[this.state.hover ? 'active' : 'base'];
+    let fill = this.props.fill;
 
     return (
-      <span style={{...style, ...this.props.style}} onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
+      <span style={{...style, ...this.props.style}}>
         <svg xmlns='http://www.w3.org/2000/svg' width={width} height={height} viewBox='-63 97 64 32'>
           <g>
 						<path fill={fill} d="M-13.189,99.611H-48.81c-7.381,0-13.387,6.005-13.387,13.387s6.006,13.389,13.387,13.389h35.621
@@ -31,19 +24,13 @@ export default class SwitchOffIcon extends React.Component {
   }
 
   static propTypes = {
-    fill: React.PropTypes.shape({
-      active: React.PropTypes.number.isRequired,
-      base: React.PropTypes.number.isRequired
-    }),
+    fill: React.PropTypes.string,
     height: React.PropTypes.number,
     width: React.PropTypes.number
   }
 
   static defaultProps = {
-    fill: {
-      active: 'red',
-      base: '#323232'
-    },
+    fill: 'white',
     height: 64,
     width: 64
   }

@@ -12,21 +12,49 @@ class Delete extends React.Component  {
 }
 
 class Switch extends React.Component  {
-  render() {
-    const props = {
-      style: this.props.style, 
-      fill: {active: 'rgba(255,255,255,0.5)', base: 'white'},
-      width: 35,
-      height: 20
+  constructor(props) {
+    super(props);
+    this.state = {
+      hover: false
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.on !== nextProps.on) {
+      this.setState({hover: false});
     }
-    return this.props.on ? <SwitchOnIcon {...props}/> : <SwitchOffIcon {...props}/>
+  }
+
+  render() {
+    const fill = this.state.hover ? 'rgba(255,255,255,0.5)' : 'white';
+    const props = {
+      height: 20,
+      style: this.props.style,
+      width: 35
+    };
+
+    let Component = this.props.on ?
+      (this.state.hover ? SwitchOffIcon : SwitchOnIcon) :
+      (this.state.hover ? SwitchOnIcon : SwitchOffIcon);
+
+    return (
+      <span onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
+        <Component {...props} fill={fill} />
+      </span>
+    );
   }
 }
 
 export default class BoxCard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleFull = this.props.flux.getActions('box').toggleFull;
+  }
+
   render() {
     let uri = `/box-${this.props.box.id}`;
-    
+
     return (
       <div style={style.card}>
         <div style={style.box}>
@@ -42,7 +70,7 @@ export default class BoxCard extends React.Component {
           <div style={style.tools}>
             <Delete style={style.tool}/>
             <div style={style.separator}/>
-            <div style={style.switch}>
+            <div style={style.switch} onClick={() => this.toggleFull(this.props.box.id)}>
               <Switch on={this.props.box.full} />
               <div>{this.props.box.full ? 'FULL' : 'FREE'}</div>
             </div>
@@ -70,7 +98,11 @@ const style = {
   card: {
     alignItems: 'center',
     background: 'linear-gradient(to bottom, #F7E4BF, #C7B699)',
-    marginTop: 25
+    marginTop: 25,
+    MozUserSelect: 'none',
+    MsUserSelect: 'none',
+    WebkitUserSelect: 'none',
+    userSelect: 'none'
   },
   box: {
     background: 'linear-gradient(135deg, #66ed8c, #00bd70, #00bd70)',
@@ -125,6 +157,7 @@ const style = {
   },
   switch: {
     alignItems: 'center',
+    cursor: 'pointer',
     padding: '25px 0',
     fontSize: 15,
     width: '30%'
