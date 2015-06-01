@@ -4,11 +4,13 @@ import React from 'react';
 
 let style = {
   base: {
-    color: 'lightblue',
+    color: '#00b3e3',
+    fontSize: 30,
+    marginTop: 25,
     width: 360
   },
   active: {
-    color: 'blue'
+    color: '#231f20'
   }
 }
 

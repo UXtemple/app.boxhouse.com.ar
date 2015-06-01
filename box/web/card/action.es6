@@ -36,11 +36,13 @@ const style = {
   documentCount: {
     number: {
       fontSize: 50,
-      lineHeight: '50px',
+      lineHeight: '50px'
     },
     label: {
-      fontSize: 15,
-      textTransform: 'uppercase',
+      fontSize: 13,
+      fontFamily: 'Roboto',
+      fontWeight: 300,  
+      textTransform: 'uppercase'
     },
     wrapper: {
       color: 'white',

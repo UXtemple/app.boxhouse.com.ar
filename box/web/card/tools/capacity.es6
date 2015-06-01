@@ -20,5 +20,7 @@ export default class Capacity extends React.Component {
 
 const style = {
   cursor: 'pointer',
-  fontSize: 15
+  fontFamily: 'Roboto',
+  fontWeight: 300,
+  fontSize: 13
 }

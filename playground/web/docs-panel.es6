@@ -22,7 +22,8 @@ const style = {
   },
   boxPosition: {
     color: 'white',
-    fontSize: 40,
-    justifyContent: 'center'
+    fontSize: 30,
+    justifyContent: 'center',
+    marginTop: 25
   }
 }
