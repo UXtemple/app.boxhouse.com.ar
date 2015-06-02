@@ -1,4 +1,4 @@
-import Add from './add';
+import Duplicate from './duplicate';
 import Title from './title';
 import Delete from './delete';
 import Separator from './separator';
@@ -10,15 +10,15 @@ export default class DocHeader extends React.Component {
       <div style={style.header}>
         <Delete style={style.tool} {...this.props} />
         <Title {...this.props} />
-        <Add style={style.tool} {...this.props} />
+        <Duplicate style={style.tool} {...this.props} />
       </div>
     );
   }
 }
 const style = {
   header: {
-    borderBottom: '1px solid green',
-    margin: '0px 25px',
+    borderBottom: '1px solid #00bd70',
+    margin: '25px 25px',
     flexDirection: 'row',
     alignItems: 'stretch',
     justifyContent: 'space-between'

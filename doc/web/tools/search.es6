@@ -9,8 +9,8 @@ export default class DocSearch extends React.Component  {
 
 const props = {
   fill: {
-    active: '#00b3e3',
-    base: '#231f20'
+    active: 'rgba(255, 255, 255, 0.3)',
+    base: 'white'
   },
   height: 35,
   width: 35

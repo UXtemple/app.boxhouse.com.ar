@@ -9,8 +9,8 @@ export default class Delete extends React.Component  {
 
 const props = {
   fill: {
-    active: 'rgba(255,255,255,0.5)',
-    base: 'white'
+    active: 'rgba(0, 189, 112, 0.5)',
+    base: '#00bd70'
   },
   height: 35,
   width: 35

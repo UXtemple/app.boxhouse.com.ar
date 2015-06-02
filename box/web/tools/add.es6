@@ -9,7 +9,7 @@ export default class BoxAdd extends React.Component  {
 
 const props = {
   fill: {
-    active: '#00b3e3',
+    active: 'rgba(35, 31, 32, 0.3)',
     base: '#231f20'
   },
   height: 35,
