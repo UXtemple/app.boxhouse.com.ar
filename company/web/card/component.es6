@@ -1,40 +1,45 @@
-import { ActionBlock } from 'panels-ui/blocks';
+import { ActionIconBlock } from 'panels-ui/blocks';
 import { CompanyRecord } from '../../records';
-import React from 'react';
 import ArrowIcon from '../../../icons/arrow';
+import React from 'react';
 
 export default class CompanyCard extends React.Component {
   render() {
     return (
-      <ActionBlock href='/profile' style={style}>
+      <ActionIconBlock href='/profile' style={style} icon={ArrowIcon}>
         <div>{this.props.company.name}</div>
-        <ArrowIcon style={style.arrow} />
-      </ActionBlock>  
-    )
+      </ActionIconBlock>
+    );
   }
+
   static propTypes = {
     company: React.PropTypes.instanceOf(CompanyRecord).isRequired
   }
 }
 
-
 const style = {
-  base: {
-    alignSelf: 'center',
-    alignItems: 'center',
-    color: '#00b3e3',
-    flexDirection: 'row',
-    fontSize: 30,
-    //justifyContent: 'center',
-    margin: '25px 50px 0px 51px',
-    width: 'auto',
-    padding: 0
+  action: {
+    base: {
+      alignSelf: 'center',
+      alignItems: 'center',
+      color: '#00b3e3',
+      flexDirection: 'row',
+      fontSize: 30,
+      //justifyContent: 'center',
+      margin: '25px 50px 0px 51px',
+      width: 'auto',
+      padding: 0
+    },
+    active: {
+      color: 'rgba(0, 179, 227, 0.3)'
+    }
   },
-  active: {
-    color: 'rgba(0, 179, 227, 0.3)'
-  },
-  arrow: {
-    //alignSelf: 'center'
+  icon: {
+    base: {
+      fill: 'white'
+    },
+    active: {
+      fill: 'red'
+    }
   }
 }
-
