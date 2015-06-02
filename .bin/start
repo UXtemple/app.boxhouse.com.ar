@@ -10,4 +10,4 @@ WEB=./playground/web
   -r flummox/component \
   -r panels-ui/blocks -v -o $WEB/vendor.js ./package.json &
 ./node_modules/.bin/livereloadify $WEB &
-./node_modules/.bin/static $WEB --port 3000 --cache 0
+./node_modules/.bin/static $WEB --port 3000 --cache 0 --host-address 0.0.0.0

@@ -17,5 +17,5 @@ const style = {
   background: 'white',
   borderRadius: 5,
   // color: 'white',
-  width: '85%'
+  width: '80%'
 }

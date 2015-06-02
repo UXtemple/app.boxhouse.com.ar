@@ -7,7 +7,7 @@ export default class Separator extends React.Component {
 }
 
 const style = {
-  backgroundColor: 'rgba(255,255,255,0.3)',
+  backgroundColor: 'rgba(0, 189, 112, 0.5)',
   margin: '25px 2.25%',
   width: '0.5%'
 }

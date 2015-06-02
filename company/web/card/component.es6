@@ -7,7 +7,7 @@ export default class CompanyCard extends React.Component {
   render() {
     return (
       <ActionIconBlock href='/profile' style={style} icon={ArrowIcon}>
-        <div>{this.props.company.name}</div>
+        <div style={style.name}>{this.props.company.name}</div>
       </ActionIconBlock>
     );
   }
@@ -36,10 +36,13 @@ const style = {
   },
   icon: {
     base: {
-      fill: 'white'
+      fill: '#00b3e3'
     },
     active: {
-      fill: 'red'
+      fill: 'rgba(0, 179, 227, 0.3)'
     }
+  },
+  name: {
+    marginRight: 20
   }
 }

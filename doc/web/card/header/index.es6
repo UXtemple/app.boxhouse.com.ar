@@ -17,7 +17,8 @@ export default class DocHeader extends React.Component {
 }
 const style = {
   header: {
-    borderBottom: '1px solid #00bd70',
+    borderBottom: '1px solid rgba(0, 189, 112, 0.5)',
+    paddingBottom: 25,
     margin: '25px 25px',
     flexDirection: 'row',
     alignItems: 'stretch',
