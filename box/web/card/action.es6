@@ -1,19 +1,16 @@
-import { ActionBlock } from 'panels-ui/blocks';
-import React from 'react';
+import { ActionIconBlock } from 'panels-ui/blocks';
 import ArrowIcon from '../../../icons/arrow';
-
-
+import React from 'react';
 
 export default class BoxAction extends React.Component {
   render() {
     return (
-      <ActionBlock href={this.props.box.id} style={style.action} flux={this.props.flux}>
+      <ActionIconBlock href={this.props.box.id} style={style.action} flux={this.props.flux} icon={ArrowIcon}>
         <div style={style.documentCount.wrapper}>
           <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
           <div style={style.documentCount.label}>documents inside</div>
         </div>
-        <ArrowIcon style={style.arrow} />
-      </ActionBlock>
+      </ActionIconBlock>
     );
   }
 }
@@ -21,17 +18,14 @@ export default class BoxAction extends React.Component {
 
 const style = {
   action: {
-    base: {
-      alignItems: 'center',
-      flexDirection: 'row',
-      padding: '25px 35px 25px 25px'
+    action: {
+      active: {},
+      base: {
+        alignItems: 'center',
+        padding: 25
+      }
     },
-    active: {
-    }
-  },
-  arrow: {
-    height: 30,
-    width: 30
+    icon: {}
   },
   documentCount: {
     number: {

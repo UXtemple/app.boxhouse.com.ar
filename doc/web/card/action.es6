@@ -1,18 +1,16 @@
-import { ActionBlock } from 'panels-ui/blocks';
+import { ActionIconBlock } from 'panels-ui/blocks';
+import ArrowIcon from '../../../icons/arrow';
 import React from 'react';
 
 export default class DocAction extends React.Component {
   render() {
     return (
-      <ActionBlock href={this.props.box.id} style={style.action}>
-        <div style={style.documentCount.wrapper}>
-          <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
-          <div style={style.documentCount.label}>documents inside</div>
+      <ActionIconBlock href={this.props.doc.id} style={style.action} flux={this.props.flux} icon={ArrowIcon}>
+        <div style={style.content.wrapper}>
+          <div style={style.content.heading}>{this.props.doc.type}</div>
+          <div style={style.content.facet}>{this.props.doc.date.from} - {this.props.doc.date.to}</div>
         </div>
-        <div style={style.arrow}>
-          <div>></div>
-        </div>
-      </ActionBlock>
+      </ActionIconBlock>
     );
   }
 }
@@ -20,28 +18,34 @@ export default class DocAction extends React.Component {
 
 const style = {
   action: {
-    base: {
-      flexDirection: 'row',
-      padding: 25
+    action: {
+      active: {},
+      base: {
+        alignItems: 'center',
+        padding: '15px 15px 15px 50px'
+      }
     },
-    active: {
+    icon: {
+      active: {
+        fill: '#323232'
+      },
+      base: {
+        fill: '#323232'
+      }
     }
   },
-  arrow: {
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  documentCount: {
-    number: {
-      fontSize: 50,
-      lineHeight: '50px',
+  content: {
+    heading: {
+      fontSize: 25
     },
-    label: {
+    facet: {
       fontSize: 15,
-      textTransform: 'uppercase',
+      fontWeight: 400,
+      flexDirection: 'row',
+      marginTop: 10
     },
     wrapper: {
-      color: 'white',
+      color: '#323232',
       flexDirection: 'column',
       flex: 1
     }
