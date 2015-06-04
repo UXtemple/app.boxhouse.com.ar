@@ -5,17 +5,65 @@ import React from 'react';
 export default class DocCardDoc extends React.Component {
   render() {
     return (
-      <div style={style}>
-        <DocHeader {...this.props} />
-        <DocAction {...this.props} />
+      <div style={style.card}>
+        <div style={style.gradient.top}>
+          <div style={style.tools}>
+            <DocHeader {...this.props} />
+          </div>
+        </div>
+        <div style={style.hanger}>
+          <div style={style.separator} />
+        </div>
+        <div style={style.gradient.bottom}>
+          <div style={style.actions}>
+            <DocAction {...this.props} />
+          </div>
+        </div>
       </div>
     );
   }
 }
 
 const style = {
-  background: 'white',
-  borderRadius: 5,
-  // color: 'white',
-  width: '80%'
+  actions: {
+    background: 'white',
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
+    width: '80%'
+  },
+  card: {
+    width: '100%'
+  },
+  hanger: {
+    alignItems: 'center',
+    background: 'white',
+    height: 10,
+    justifyContent: 'center',
+    width: '100%'
+  },
+  gradient: {
+    top: {
+    flexDirection: 'column',
+    alignItems: 'center', 
+    background: 'linear-gradient(to bottom, #00bd70, #169B65)',
+    width: '100%'
+    },
+    bottom: {
+    flexDirection: 'column',
+    alignItems: 'center', 
+    background: 'linear-gradient(to top, #00bd70, #169B65, #169B65)',
+    width: '100%'
+    }
+  },
+  tools: {
+    background: 'white',
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    width: '80%'
+  },
+  separator: {
+    background: 'rgba(0, 189, 112, 0.5)',
+    height: 1,
+    width: '65%'
+  }
 }
