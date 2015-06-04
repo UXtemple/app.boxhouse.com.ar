@@ -1,0 +1,14 @@
+{
+  "app": "app.boxhouse.com",
+  "uri": "/",
+  "types": [{
+    "name": "DocNumber",
+    "path": "boxhouse/doc/web/doc-number"
+  }, {
+    "name": "DocFields",
+    "path": "boxhouse/doc/web/doc-fields"
+  }, {
+    "name": "EditDoc",
+    "path": "boxhouse/doc/web/edit-doc"
+  }]
+}

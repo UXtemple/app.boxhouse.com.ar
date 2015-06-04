@@ -10,7 +10,7 @@ export default class CompanyCardContainer extends React.Component {
   }
 
   render() {
-    return <FluxComponent connectToStores={this.stores}><Component /></FluxComponent>;
+    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component /></FluxComponent>;
   }
 }
 

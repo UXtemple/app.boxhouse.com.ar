@@ -14,7 +14,10 @@ let style = {
 
 export default class CompanyCard extends React.Component {
   render() {
-    return <ActionBlock href='/profile' style={style}>{this.props.company.name}</ActionBlock>
+    return (
+      this.props.company ? <ActionBlock href='profile' style={style} flux={this.props.flux}>{this.props.company.name}</ActionBlock> :
+        <span>loading</span>
+    );
   }
 }
 

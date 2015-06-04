@@ -1,31 +1,53 @@
 import BOX_DUMMY_DATA from '../../box/dummy-data';
 import COMPANY_DUMMY_DATA from '../../company/dummy-data';
 import DOC_DUMMY_DATA from '../../doc/dummy-data';
-import * as Flummox from 'flummox';
 import FluxComponent from 'flummox/component';
 import * as Boxhouse from '../../index';
-import { Container as AppContainer } from '../../app/web';
+import * as PanelsApp from 'panels-app';
+
+import appPanel from '../../app/panel.json';
+import appTypes from '../../app/types';
+
+import boxPanel from '../../box/panel.json';
+import boxTypes from '../../box/types';
+
+import companyPanel from '../../company/panel.json';
+import companyTypes from '../../company/types';
+
+import PanelsContainer from 'panels-app/panels/container';
 import React from 'react';
 
-const flux = new Boxhouse.App.Flux();
+const flux = new PanelsApp.Flux();
 
-flux.getActions('box').loadBoxes(BOX_DUMMY_DATA);
-flux.getActions('company').loadCompanies(COMPANY_DUMMY_DATA);
-flux.getActions('doc').loadDocs(DOC_DUMMY_DATA);
+flux.getActions('panels').load([appPanel, boxPanel, companyPanel]);
+flux.getActions('types').load([...appTypes, ...boxTypes, ...companyTypes]);
+flux.getActions('router').navigate(location.href);
+
+// {
+//   app: "app.boxhouse.com",
+//   flux: Boxhouse.App.Flux,
+//   init(flux) {
+//     flux.getActions('box').loadBoxes(BOX_DUMMY_DATA);
+//     flux.getActions('company').loadCompanies(COMPANY_DUMMY_DATA);
+//     flux.getActions('doc').loadDocs(DOC_DUMMY_DATA);
+//   }
+// }
+flux.createContext(appPanel.app, Boxhouse.App.Flux, flux => {
+  flux.getActions('box').loadBoxes(BOX_DUMMY_DATA);
+  flux.getActions('company').loadCompanies(COMPANY_DUMMY_DATA);
+  flux.getActions('doc').loadDocs(DOC_DUMMY_DATA);
+});
 
 React.render(
   <FluxComponent flux={flux}>
-    <AppContainer />
+    <PanelsContainer />
   </FluxComponent>,
   document.getElementById('playground-container')
 );
 
 let Playground = {
-  Boxhouse,
-  flux,
-  Flummox,
-  FluxComponent,
-  React
+  boxhouse: flux.getContext('app.boxhouse.com'),
+  flux
 };
 window.Playground = Playground;
 

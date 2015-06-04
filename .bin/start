@@ -8,6 +8,9 @@ WEB=./playground/web
 ./node_modules/.bin/watchify `.bin/extract-dependencies` \
   -r react/addons \
   -r flummox/component \
+  -r panels-app \
+  -r panels-app/panels/container \
   -r panels-ui/blocks -v -o $WEB/vendor.js ./package.json &
 ./node_modules/.bin/livereloadify $WEB &
-./node_modules/.bin/static $WEB --port 3000 --cache 0
+sudo .bin/server.es6
+# ./node_modules/.bin/static $WEB --port 3000 --cache 0

@@ -6,6 +6,10 @@ export default class CompanyActions extends Actions {
     return new CompanyRecord(company);
   }
 
+  setName(id, name) {
+    return {id, name};
+  }
+
   loadCompanies(companies) {
     return companies.map(company => new CompanyRecord(company));
   }

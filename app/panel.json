@@ -1,0 +1,24 @@
+{
+  "app": "app.boxhouse.com.dev:3000",
+  "uri": "/",
+  "title": "Boxhouse app",
+  "style": {
+    "backgroundColor": "#F7E4BF",
+    "paddingBottom": 100
+  },
+  "blocks": [{
+    "type": "CompanyCard",
+    "data": {
+      "id": 1
+    }
+  }, {
+    "type": "Search"
+  }, {
+    "type": "AddBox"
+  }, {
+    "type": "Boxes",
+    "data": {
+      "companyId": 1
+    }
+  }]
+}

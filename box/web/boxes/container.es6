@@ -2,7 +2,7 @@ import Component from './component';
 import FluxComponent from 'flummox/component';
 import React from 'react';
 
-export default class BoxesFeedContainer extends React.Component {
+export default class BoxesContainer extends React.Component {
   get stores() {
     return {
       box: store => ({boxes: store.companyId(this.props.companyId)})
@@ -10,10 +10,10 @@ export default class BoxesFeedContainer extends React.Component {
   }
 
   render() {
-    return <FluxComponent connectToStores={this.stores}><Component /></FluxComponent>;
+    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component /></FluxComponent>;
   }
 }
 
-BoxesFeedContainer.propTypes = {
+BoxesContainer.propTypes = {
   companyId: React.PropTypes.number.isRequired
 }

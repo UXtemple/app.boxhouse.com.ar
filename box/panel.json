@@ -1,0 +1,17 @@
+{
+  "app": "app.boxhouse.com.dev:3000",
+  "uri": "/:boxid",
+  "title": "Box :boxid",
+  "blocks": [{
+    "type": "BoxLocation",
+    "data": {
+      "id": ":boxid"
+    }
+  }, {
+    "type": "Search"
+  }, {
+    "type": "AddDoc"
+  }, {
+    "type": "Docs"
+  }]
+}

@@ -1,0 +1,12 @@
+{
+  "app": "app.boxhouse.com",
+  "uri": "/:boxId/:docId",
+  "title": "Doc :docId @ Box :boxId",
+  "blocks": [{
+    "type": "DocNumber"
+  }, {
+    "type": "EditDoc"
+  }, {
+    "type": "DocFields"
+  }]
+}
