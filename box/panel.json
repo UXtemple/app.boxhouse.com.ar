@@ -2,14 +2,30 @@
   "app": "uxtemple.boxhouse.com.dev:3000",
   "uri": "/:boxid",
   "title": "Box :boxid | UXtemple @ Boxhouse",
+  "style": {
+    "backgroundColor": "#00bd70",
+    "paddingBottom": 100
+  },
   "blocks": [{
     "type": "BoxPosition",
     "data": {
       "id": ":boxid"
+    },
+    "style": {
+      "color": "white",
+      "fontSize": 30,
+      "justifyContent": "center",
+      "marginTop": 25
     }
   }, {
-    "type": "DocsTools"
+    "type": "DocsTools",
+    "data": {
+      "boxId": ":boxid"
+    }
   }, {
-    "type": "Docs"
+    "type": "Docs",
+    "data": {
+      "boxId": ":boxid"
+    }
   }]
 }
