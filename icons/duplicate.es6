@@ -4,7 +4,7 @@ const style = {
   cursor: 'pointer'
 }
 
-export default class PlusIcon extends React.Component {
+export default class DuplicateIcon extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,15 +19,11 @@ export default class PlusIcon extends React.Component {
     return (
       <span style={{...style, ...this.props.style}} onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
         <svg xmlns='http://www.w3.org/2000/svg' width={width} height={height} viewBox='0 0 64 64'>
-          <g>
-            <path fill={fill} d="M43.15,30.969H32.807V20.625c0-0.829-0.671-1.5-1.5-1.5s-1.5,0.671-1.5,1.5v10.344H19.462
-            c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5h10.345v10.344c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5V33.969H43.15
-            c0.828,0,1.5-0.671,1.5-1.5S43.979,30.969,43.15,30.969z"/>
-            <path fill={fill} d="M31.307,3.656c-15.888,0-28.813,12.925-28.813,28.813c0,15.887,12.926,28.813,28.813,28.813
-            s28.812-12.926,28.812-28.813C60.119,16.582,47.194,3.656,31.307,3.656z M31.307,58.282c-14.233,0-25.813-11.58-25.813-25.813
-            c0-14.233,11.58-25.813,25.813-25.813s25.812,11.58,25.812,25.813C57.119,46.702,45.54,58.282,31.307,58.282z"/>        
-          </g>
-        </svg>
+          <path fill={fill} d="M53.311,2.833H18.19c-0.552,0-1,0.448-1,1v5.296h-6.44c-0.552,0-1,0.448-1,1v50.029c0,0.553,0.448,1,1,1
+							h35.12c0.553,0,1-0.447,1-1v-5.297h6.441c0.553,0,1-0.447,1-1V3.833C54.311,3.281,53.863,2.833,53.311,2.833z M44.869,59.158H11.75
+							V11.129h6.438c0.001,0,0.001,0,0.002,0s0.001,0,0.002,0h26.677V59.158z M52.311,52.861h-5.441V10.129c0-0.552-0.447-1-1-1H19.19
+							V4.833h33.121V52.861z"/>
+				</svg>
       </span>
     );
   }

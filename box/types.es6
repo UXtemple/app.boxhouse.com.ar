@@ -1,18 +1,14 @@
-import { default as AddDoc } from '../doc/web/add-doc';
-import { default as BoxLocation } from '../box/web/location';
+import { default as BoxPosition } from '../box/web/position/container';
 import { default as Docs } from '../doc/web/docs/container';
-import { default as Search } from '../doc/web/search';
+import { default as DocsTools } from '../doc/web/tools/component';
 
 export default [{
-  name: 'AddDoc',
-  component: AddDoc
-}, {
-  name: 'BoxLocation',
-  component: BoxLocation
+  name: 'BoxPosition',
+  component: BoxPosition
 }, {
   name: 'Docs',
   component: Docs
 }, {
-  name: 'Search',
-  component: Search
+  name: 'DocsTools',
+  component: DocsTools
 }];

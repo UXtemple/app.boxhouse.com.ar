@@ -1,9 +1,10 @@
+import * as Boxhouse from '../../index';
+import * as PanelsApp from 'panels-app';
+
 import BOX_DUMMY_DATA from '../../box/dummy-data';
 import COMPANY_DUMMY_DATA from '../../company/dummy-data';
 import DOC_DUMMY_DATA from '../../doc/dummy-data';
 import FluxComponent from 'flummox/component';
-import * as Boxhouse from '../../index';
-import * as PanelsApp from 'panels-app';
 
 import appPanel from '../../app/panel.json';
 import appTypes from '../../app/types';

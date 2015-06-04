@@ -1,5 +1,5 @@
-import { Container as BoxCard } from '../card';
 import { BoxRecord } from '../../records';
+import BoxCard from '../card/container';
 import React from 'react';
 
 export default class Boxes extends React.Component {

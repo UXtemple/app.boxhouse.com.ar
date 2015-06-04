@@ -1,26 +1,48 @@
-import { ActionBlock } from 'panels-ui/blocks';
+import { ActionIconBlock } from 'panels-ui/blocks';
 import { CompanyRecord } from '../../records';
+import ArrowIcon from '../../../icons/arrow';
 import React from 'react';
-
-let style = {
-  base: {
-    color: 'lightblue',
-    width: 360
-  },
-  active: {
-    color: 'blue'
-  }
-}
 
 export default class CompanyCard extends React.Component {
   render() {
     return (
-      this.props.company ? <ActionBlock href='profile' style={style} flux={this.props.flux}>{this.props.company.name}</ActionBlock> :
-        <span>loading</span>
+      <ActionIconBlock href='/profile' style={style} icon={ArrowIcon}>
+        <div style={style.name}>{this.props.company.name}</div>
+      </ActionIconBlock>
     );
+  }
+
+  static propTypes = {
+    company: React.PropTypes.instanceOf(CompanyRecord).isRequired
   }
 }
 
-CompanyCard.propTypes = {
-  company: React.PropTypes.instanceOf(CompanyRecord).isRequired
+const style = {
+  action: {
+    base: {
+      alignSelf: 'center',
+      alignItems: 'center',
+      color: '#00b3e3',
+      flexDirection: 'row',
+      fontSize: 30,
+      //justifyContent: 'center',
+      margin: '25px 50px 0px 51px',
+      width: 'auto',
+      padding: 0
+    },
+    active: {
+      color: 'rgba(0, 179, 227, 0.3)'
+    }
+  },
+  icon: {
+    base: {
+      fill: '#00b3e3'
+    },
+    active: {
+      fill: 'rgba(0, 179, 227, 0.3)'
+    }
+  },
+  name: {
+    marginRight: 20
+  }
 }

@@ -1,7 +1,7 @@
 {
-  "app": "app.boxhouse.com.dev:3000",
+  "app": "uxtemple.boxhouse.com.dev:3000",
   "uri": "/",
-  "title": "Boxhouse app",
+  "title": "UXtemple @ Boxhouse",
   "style": {
     "backgroundColor": "#F7E4BF",
     "paddingBottom": 100
@@ -12,9 +12,10 @@
       "id": 1
     }
   }, {
-    "type": "Search"
-  }, {
-    "type": "AddBox"
+    "type": "BoxesTools",
+    "data": {
+      "companyId": 1
+    }
   }, {
     "type": "Boxes",
     "data": {

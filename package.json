@@ -32,7 +32,8 @@
     "flummox": "^4.0.0-alpha2",
     "immutable": "^3.7.3",
     "panels-ui": "^0.2.0",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "rlite-router": "^1.0.91"
   },
   "devDependencies": {
     "babel": "^5.4.7",

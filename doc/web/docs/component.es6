@@ -1,31 +1,15 @@
-import { ActionBlock } from 'panels-ui/blocks';
+import { DocRecord } from '../../records';
+import DocCard from '../card/container';
 import React from 'react';
 
-let style = {
-  base: {
-    backgroundColor: '#F2F2F2',
-    borderBottom: '1px solid #cccccc',
-    width: 360
-  },
-  active: {
-    color: 'pink'
-  }
-}
-
 export default class Docs extends React.Component {
-  getCard(doc) {
-    let href = `/box-1/doc-${doc.id}`;
-
-    return <ActionBlock href={href} key={doc.id} style={style}>{doc.office}</ActionBlock>;
-  }
-
   render() {
-    let docs = this.props.docs.map(this.getCard);
+    let docs = this.props.docs.map(doc => <DocCard id={doc.id} />);
 
-    return <div>{docs}</div>;
+    return <div style={{width: '100%'}}>{docs}</div>;
   }
 }
 
-// Doc.propTypes = {
-//   doc: React.PropTypes.instanceOf(DocRecord).isRequired
-// }
+Docs.propTypes = {
+  docs: React.PropTypes.arrayOf(DocRecord).isRequired
+}
