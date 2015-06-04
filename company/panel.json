@@ -1,11 +1,11 @@
 {
-  "app": "app.boxhouse.com.dev:3000",
+  "app": "uxtemple.boxhouse.com.dev:3000",
   "uri": "/profile",
   "title": "Company profile",
   "blocks": [{
     "type": "CompanyProfile",
     "data": {
-      "id": 1
+      "id": "1"
     }
   }]
 }

@@ -1,5 +1,5 @@
 const DUMMY_DATA = [{
-  id: 1,
+  id: '1',
   documentCount: 4,
   position: {
     shelf: 1,
@@ -9,9 +9,9 @@ const DUMMY_DATA = [{
     depth: 1
   },
   full: true,
-  companyId: 1
+  companyId: '1'
 }, {
-  id: 2,
+  id: '2',
   documentCount: 3,
   position: {
     shelf: 1,
@@ -21,9 +21,9 @@ const DUMMY_DATA = [{
     depth: 2
   },
   full: false,
-  companyId: 1
+  companyId: '1'
 }, {
-  id: 3,
+  id: '3',
   documentCount: 300,
   position: {
     shelf: 1,
@@ -33,9 +33,9 @@ const DUMMY_DATA = [{
     depth: 2
   },
   full: true,
-  companyId: 1
+  companyId: '1'
 }, {
-  id: 4,
+  id: '4',
   documentCount: 1000,
   position: {
     shelf: 1,
@@ -45,9 +45,9 @@ const DUMMY_DATA = [{
     depth: 2
   },
   full: true,
-  companyId: 1
+  companyId: '1'
 }, {
-  id: 5,
+  id: '5',
   documentCount: 3,
   position: {
     shelf: 1,
@@ -57,7 +57,7 @@ const DUMMY_DATA = [{
     depth: 2
   },
   full: false,
-  companyId: 1
+  companyId: '1'
 }];
 
 export default DUMMY_DATA;

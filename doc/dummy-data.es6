@@ -1,6 +1,6 @@
 const DUMMY_DATA = [{
   type: 'Cashflow',
-  id: 1,
+  id: '1',
   date: {
     from: '02/01/2007',
     to: '31/01/2007'
@@ -9,12 +9,12 @@ const DUMMY_DATA = [{
     from: 3320,
     to: 3345
   },
-  boxId: 1,
-  companyId: 1,
+  boxId: '1',
+  companyId: '1',
   office: 'Devoto'
 }, {
   type: 'Cashflow',
-  id: 2,
+  id: '2',
   date: {
     from: '02/01/2007',
     to: '31/01/2007'
@@ -23,12 +23,12 @@ const DUMMY_DATA = [{
     from: 3170,
     to: 3195
   },
-  boxId: 1,
-  companyId: 1,
+  boxId: '1',
+  companyId: '1',
   office: 'Brinkmann'
 }, {
   type: 'Cashflow',
-  id: 3,
+  id: '3',
   date: {
     from: '02/01/2007',
     to: '31/01/2007'
@@ -37,8 +37,8 @@ const DUMMY_DATA = [{
     from: 2072,
     to: 2097
   },
-  boxId: 1,
-  companyId: 1,
+  boxId: '1',
+  companyId: '1',
   office: 'Galvez'
 }];
 

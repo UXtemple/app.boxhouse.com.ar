@@ -4,9 +4,12 @@ import ArrowIcon from '../../../icons/arrow';
 import React from 'react';
 
 export default class CompanyCard extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
-      <ActionIconBlock href='/profile' style={style} icon={ArrowIcon}>
+      <ActionIconBlock href='profile' style={style} icon={ArrowIcon} flux={this.props.flux}>
         <div style={style.name}>{this.props.company.name}</div>
       </ActionIconBlock>
     );

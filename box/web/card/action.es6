@@ -7,7 +7,7 @@ import ArrowIcon from '../../../icons/arrow';
 export default class BoxAction extends React.Component {
   render() {
     return (
-      <ActionBlock href={this.props.box.id} style={style.action}>
+      <ActionBlock href={this.props.box.id} style={style.action} flux={this.props.flux}>
         <div style={style.documentCount.wrapper}>
           <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
           <div style={style.documentCount.label}>documents inside</div>

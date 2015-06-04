@@ -1,8 +1,8 @@
 const DUMMY_DATA = [{
-  id: 1,
+  id: '1',
   name: 'UXtemple'
 }, {
-  id: 2,
+  id: '2',
   name: 'Boxhouse'
 }];
 

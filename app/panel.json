@@ -9,17 +9,17 @@
   "blocks": [{
     "type": "CompanyCard",
     "data": {
-      "id": 1
+      "id": "1"
     }
   }, {
     "type": "BoxesTools",
     "data": {
-      "companyId": 1
+      "companyId": "1"
     }
   }, {
     "type": "Boxes",
     "data": {
-      "companyId": 1
+      "companyId": "1"
     }
   }]
 }
