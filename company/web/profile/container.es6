@@ -12,8 +12,8 @@ export default class CompanyProfileContainer extends React.Component {
   render() {
     return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component /></FluxComponent>;
   }
-}
 
-CompanyProfileContainer.propTypes = {
-  id: React.PropTypes.number.isRequired
+  static propTypes = {
+    id: React.PropTypes.string.isRequired
+  }
 }

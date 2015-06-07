@@ -1,12 +1,21 @@
-import PositionRecord from './position';
 import { Record } from 'immutable';
+import { v4 as uuid } from 'node-uuid';
+import PositionRecord from './position';
 
 export default class BoxRecord extends Record({
   id: undefined,
   documentCount: undefined,
-  position: new PositionRecord(),
+  position: undefined,
   full: false,
   companyId: undefined
-}) {};
+}) {
+  static from(raw) {
+    if (typeof raw.id === 'undefined') {
+      raw.id = uuid();
+    }
 
-// TODO constructor create PositionRecord if not there
+    raw.position = PositionRecord.from(raw.position);
+
+    return new BoxRecord(raw);
+  }
+}

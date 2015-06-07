@@ -7,7 +7,7 @@
     "paddingBottom": 100
   },
   "blocks": [{
-    "type": "CompanyCard",
+    "type": "CompanyProfileCard",
     "data": {
       "id": "1"
     }

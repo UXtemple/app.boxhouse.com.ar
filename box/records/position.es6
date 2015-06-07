@@ -6,4 +6,8 @@ export default class PositionRecord extends Record({
   height: undefined,
   position: undefined,
   depth: undefined
-}) {};
+}) {
+  static from(raw) {
+    return new PositionRecord(raw);
+  }
+}

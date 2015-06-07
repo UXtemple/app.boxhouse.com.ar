@@ -10,6 +10,6 @@ export default class DocsContainer extends React.Component {
   }
 
   render() {
-    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component {...this.props} /></FluxComponent>;
+    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component panels={this.props.panels} /></FluxComponent>;
   }
 }

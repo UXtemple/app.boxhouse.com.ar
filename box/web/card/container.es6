@@ -10,10 +10,10 @@ export default class BoxCardContainer extends React.Component {
   }
 
   render() {
-    return <FluxComponent connectToStores={this.stores}><Component /></FluxComponent>;
+    return <FluxComponent connectToStores={this.stores}><Component panels={this.props.panels} /></FluxComponent>;
   }
 
   static propTypes = {
-    id: React.PropTypes.number.isRequired
+    id: React.PropTypes.string.isRequired
   }
 }

@@ -1,6 +1,6 @@
 import { default as Boxes } from '../box/web/boxes/container';
 import { default as BoxesTools } from '../box/web/tools/component';
-import { default as CompanyCard } from '../company/web/card/container';
+import { default as CompanyProfileCard } from '../company/web/profile-card/container';
 
 export default [{
   name: 'Boxes',
@@ -9,6 +9,6 @@ export default [{
   name: 'BoxesTools',
   component: BoxesTools
 }, {
-  name: 'CompanyCard',
-  component: CompanyCard
+  name: 'CompanyProfileCard',
+  component: CompanyProfileCard
 }];

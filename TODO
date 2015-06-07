@@ -1,0 +1,18 @@
+* replace types for panel.js that includes the panel itself and all of its dependencies. It will
+  only export one component which holds the panel itself
+* injectActions instead of using them with flux
+* define store handlers as raw functions and pass in the state
+* remove action classes https://github.com/acdlite/flummox/issues/223
+* PanelsFluxComponent -> FluxComponent w/panels prop on children?
+* real URIs on hrefs - it doesn't matter that internally we do something else, a user should be
+  able to open them in another window too.
+* lists into list component
+* panels-server + file structure for serving apps
+* fetching remote stuff from panels-server
+* a backend for apps like a DB for BH in a way
+* users / authentication
+* centred panels
+* app config (bg colour, etc.)
+* animations on panels
+* session store
+* de/rehydrate stores in a more common way

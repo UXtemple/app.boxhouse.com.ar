@@ -27,8 +27,8 @@ export default class SearchIcon extends React.Component {
 
   static propTypes = {
     fill: React.PropTypes.shape({
-      active: React.PropTypes.number.isRequired,
-      base: React.PropTypes.number.isRequired
+      active: React.PropTypes.string.isRequired,
+      base: React.PropTypes.string.isRequired
     }),
     height: React.PropTypes.number,
     width: React.PropTypes.number

@@ -8,20 +8,34 @@ import FluxComponent from 'flummox/component';
 
 import appPanel from '../../app/panel.json';
 import appTypes from '../../app/types';
-
 import boxPanel from '../../box/panel.json';
 import boxTypes from '../../box/types';
-
 import companyPanel from '../../company/panel.json';
 import companyTypes from '../../company/types';
+import dashboardPanel from '../../dashboard/panel.json';
+import dashboardTypes from '../../dashboard/types';
+import docPanel from '../../doc/panel.json';
+import docTypes from '../../doc/types';
 
 import PanelsContainer from 'panels-app/panels/container';
 import React from 'react';
 
 const flux = new PanelsApp.Flux();
 
-flux.getActions('panels').load([appPanel, boxPanel, companyPanel]);
-flux.getActions('types').load([...appTypes, ...boxTypes, ...companyTypes]);
+flux.getActions('panels').load([
+  appPanel,
+  boxPanel,
+  companyPanel,
+  docPanel,
+  dashboardPanel
+]);
+flux.getActions('types').load([
+  ...appTypes,
+  ...boxTypes,
+  ...companyTypes,
+  ...dashboardTypes,
+  ...docTypes
+]);
 flux.getActions('router').navigate(location.href);
 
 // {
@@ -37,6 +51,10 @@ flux.createContext(appPanel.app, Boxhouse.App.Flux, flux => {
   flux.getActions('box').loadBoxes(BOX_DUMMY_DATA);
   flux.getActions('company').loadCompanies(COMPANY_DUMMY_DATA);
   flux.getActions('doc').loadDocs(DOC_DUMMY_DATA);
+});
+
+flux.createContext(dashboardPanel.app, Boxhouse.Dashboard.Flux, flux => {
+  flux.getActions('company').loadCompanies(COMPANY_DUMMY_DATA);
 });
 
 React.render(

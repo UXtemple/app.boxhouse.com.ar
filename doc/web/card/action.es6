@@ -5,7 +5,7 @@ import React from 'react';
 export default class DocAction extends React.Component {
   render() {
     return (
-      <ActionIconBlock href={this.props.doc.id} style={style.action} flux={this.props.flux} icon={ArrowIcon}>
+      <ActionIconBlock href={this.props.doc.id} style={style.action} panels={this.props.panels} icon={ArrowIcon}>
         <div style={style.content.wrapper}>
           <div style={style.content.heading}>{this.props.doc.type}</div>
           <div style={style.content.facet}>{this.props.doc.date.from} - {this.props.doc.date.to}</div>

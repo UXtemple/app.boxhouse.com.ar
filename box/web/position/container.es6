@@ -12,8 +12,8 @@ export default class BoxPositionContainer extends React.Component {
   render() {
     return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component {...this.props} /></FluxComponent>;
   }
-}
 
-BoxPositionContainer.propTypes = {
-  id: React.PropTypes.number.isRequired
+  static propTypes = {
+    id: React.PropTypes.string.isRequired
+  }
 }

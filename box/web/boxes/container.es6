@@ -10,10 +10,10 @@ export default class BoxesContainer extends React.Component {
   }
 
   render() {
-    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component /></FluxComponent>;
+    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component panels={this.props.panels} /></FluxComponent>;
   }
-}
 
-BoxesContainer.propTypes = {
-  companyId: React.PropTypes.number.isRequired
+  static propTypes = {
+    companyId: React.PropTypes.string.isRequired
+  }
 }

@@ -1,6 +1,6 @@
 import Component from './component';
 import FluxComponent from 'flummox/component';
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 export default class CompanyCardContainer extends React.Component {
   get stores() {
@@ -10,10 +10,10 @@ export default class CompanyCardContainer extends React.Component {
   }
 
   render() {
-    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component /></FluxComponent>;
+    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component panels={this.props.panels} /></FluxComponent>;
   }
-}
 
-CompanyCardContainer.propTypes = {
-  id: React.PropTypes.number.isRequired
+  static propTypes = {
+    id: PropTypes.string.isRequired
+  }
 }

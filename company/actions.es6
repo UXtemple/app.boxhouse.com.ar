@@ -3,7 +3,7 @@ import { CompanyRecord } from './records';
 
 export default class CompanyActions extends Actions {
   add(company) {
-    return new CompanyRecord(company);
+    return CompanyRecord.from(company);
   }
 
   setName(id, name) {
@@ -11,6 +11,6 @@ export default class CompanyActions extends Actions {
   }
 
   loadCompanies(companies) {
-    return companies.map(company => new CompanyRecord(company));
+    return companies.map(company => CompanyRecord.from(company));
   }
 }

@@ -30,7 +30,7 @@ const DUMMY_DATA = [{
     rack: 1,
     height: 1,
     position: 1,
-    depth: 2
+    depth: 3
   },
   full: true,
   companyId: '1'
@@ -42,7 +42,7 @@ const DUMMY_DATA = [{
     rack: 1,
     height: 1,
     position: 1,
-    depth: 2
+    depth: 4
   },
   full: true,
   companyId: '1'
@@ -54,7 +54,7 @@ const DUMMY_DATA = [{
     rack: 1,
     height: 1,
     position: 1,
-    depth: 2
+    depth: 5
   },
   full: false,
   companyId: '1'

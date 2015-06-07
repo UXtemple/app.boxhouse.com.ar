@@ -1,7 +1,5 @@
-// TODO
-// import DateRangeRecord, NumberRangeRecord.
-// Both will extend from RangeRecord
 import { Record } from 'immutable';
+import { v4 as uuid } from 'node-uuid';
 
 export default class DocRecord extends Record({
   id: undefined,
@@ -17,4 +15,12 @@ export default class DocRecord extends Record({
   boxId: undefined,
   companyId: undefined,
   office: undefined
-}) {};
+}) {
+  static from(raw) {
+    if (typeof raw.id === 'undefined') {
+      raw.id = uuid();
+    }
+
+    return new DocRecord(raw);
+  }
+}

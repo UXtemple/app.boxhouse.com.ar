@@ -10,8 +10,8 @@ export default class CompanyProfile extends React.Component {
         <span>loading</span>
     );
   }
-}
 
-CompanyProfile.propTypes = {
-  company: React.PropTypes.instanceOf(CompanyRecord).isRequired
+  static propTypes = {
+    company: React.PropTypes.instanceOf(CompanyRecord) //.isRequired
+  }
 }

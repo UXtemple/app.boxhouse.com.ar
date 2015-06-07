@@ -11,10 +11,15 @@ export default class BoxStore extends Store {
     super();
 
     const boxActionIds = flux.getActionIds('box');
+    this.register(boxActionIds.add, this.add);
     this.register(boxActionIds.loadBoxes, this.loadBoxes);
     this.register(boxActionIds.toggleFull, this.toggleFull);
 
     this.state = new StateRecord();
+  }
+
+  add(box) {
+    this.setState(this.state.set('boxes', this.state.boxes.push(box)));
   }
 
   id(id) {

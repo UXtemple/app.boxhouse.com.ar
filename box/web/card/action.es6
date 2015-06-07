@@ -5,7 +5,7 @@ import React from 'react';
 export default class BoxAction extends React.Component {
   render() {
     return (
-      <ActionIconBlock href={this.props.box.id} style={style.action} flux={this.props.flux} icon={ArrowIcon}>
+      <ActionIconBlock href={this.props.box.id} style={style.action} panels={this.props.panels} icon={ArrowIcon}>
         <div style={style.documentCount.wrapper}>
           <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
           <div style={style.documentCount.label}>documents inside</div>

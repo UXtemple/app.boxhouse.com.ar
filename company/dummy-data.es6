@@ -1,9 +1,11 @@
 const DUMMY_DATA = [{
   id: '1',
-  name: 'UXtemple'
+  name: 'UXtemple',
+  uri: 'http://uxtemple.boxhouse.com.dev:3000/'
 }, {
   id: '2',
-  name: 'Boxhouse'
+  name: 'Boxhouse',
+  uri: 'http://boxhouse.boxhouse.com.dev:3000/'
 }];
 
 export default DUMMY_DATA;

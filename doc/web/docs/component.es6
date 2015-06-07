@@ -1,15 +1,15 @@
 import { DocRecord } from '../../records';
 import DocCard from '../card/container';
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default class Docs extends React.Component {
+export default class Docs extends Component {
   render() {
-    let docs = this.props.docs.map(doc => <DocCard id={doc.id} />);
+    let docs = this.props.docs.map(doc => <DocCard key={doc.id} id={doc.id} panels={this.props.panels} />);
 
     return <div style={{width: '100%'}}>{docs}</div>;
   }
-}
 
-Docs.propTypes = {
-  docs: React.PropTypes.arrayOf(DocRecord).isRequired
+  static propTypes = {
+    docs: PropTypes.arrayOf(DocRecord) //.isRequired
+  }
 }

@@ -1,7 +1,7 @@
 import { BoxRecord } from '../../records';
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default class BoxPosition extends React.Component {
+export default class BoxPosition extends Component {
   render() {
     return (
       <div style={{...style, ...this.props.style}}>
@@ -15,7 +15,7 @@ export default class BoxPosition extends React.Component {
   }
 
   static propTypes = {
-    box: React.PropTypes.instanceOf(BoxRecord).isRequired
+    box: PropTypes.instanceOf(BoxRecord) //.isRequired
   }
 }
 

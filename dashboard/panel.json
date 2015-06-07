@@ -1,0 +1,14 @@
+{
+  "app": "dashboard.boxhouse.com.dev:3000",
+  "uri": "/",
+  "title": "Boxhouse dashboard",
+  "style": {
+    "backgroundColor": "#F7E4BF",
+    "paddingBottom": 100
+  },
+  "blocks": [{
+    "type": "DashboardTools"
+  }, {
+    "type": "Companies"
+  }]
+}

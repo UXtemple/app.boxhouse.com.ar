@@ -14,7 +14,7 @@ export default class BoxCard extends React.Component {
   }
 
   static propTypes = {
-    box: React.PropTypes.instanceOf(BoxRecord).isRequired
+    box: React.PropTypes.instanceOf(BoxRecord) //.isRequired
   }
 }
 

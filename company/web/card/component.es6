@@ -9,14 +9,14 @@ export default class CompanyCard extends React.Component {
   }
   render() {
     return (
-      <ActionIconBlock href='profile' style={style} icon={ArrowIcon} flux={this.props.flux}>
+      <ActionIconBlock href={this.props.company.uri} style={style} icon={ArrowIcon} {...this.props}>
         <div style={style.name}>{this.props.company.name}</div>
       </ActionIconBlock>
     );
   }
 
   static propTypes = {
-    company: React.PropTypes.instanceOf(CompanyRecord).isRequired
+    company: React.PropTypes.instanceOf(CompanyRecord) //.isRequired
   }
 }
 

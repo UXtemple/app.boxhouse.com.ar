@@ -3,10 +3,10 @@ import { DocRecord } from './records';
 
 export default class DocActions extends Actions {
   add(doc) {
-    return new DocRecord(doc);
+    return DocRecord.from(doc);
   }
 
   loadDocs(docs) {
-    return docs.map(doc => new DocRecord(doc));
+    return docs.map(doc => DocRecord.from(doc));
   }
 }

@@ -10,10 +10,10 @@ export default class DocCardContainer extends React.Component {
   }
 
   render() {
-    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component /></FluxComponent>;
+    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component panels={this.props.panels} /></FluxComponent>;
   }
-}
 
-DocCardContainer.propTypes = {
-  id: React.PropTypes.number.isRequired
+  static propTypes = {
+    id: React.PropTypes.string.isRequired
+  }
 }
