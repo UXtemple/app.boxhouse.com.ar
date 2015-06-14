@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/UXtemple/boxhouse",
   "dependencies": {
-    "flummox": "^4.0.0-alpha2",
+    "flummox": "4.0.0-alpha2",
     "immutable": "^3.7.3",
     "node-uuid": "^1.4.3",
     "panels-ui": "^0.2.2",

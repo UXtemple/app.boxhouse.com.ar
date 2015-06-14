@@ -25,7 +25,7 @@ const style = {
     base: {
       alignSelf: 'center',
       alignItems: 'center',
-      color: '#00b3e3',
+      color: '#F7E4BF',
       flexDirection: 'row',
       fontSize: 30,
       //justifyContent: 'center',
@@ -34,18 +34,18 @@ const style = {
       padding: 0
     },
     active: {
-      color: 'rgba(0, 179, 227, 0.3)'
+      color: 'rgba(247,228,191,0.3)'
     }
   },
   icon: {
     base: {
-      fill: '#00b3e3'
+      fill: '#F7E4BF'
     },
     active: {
-      fill: 'rgba(0, 179, 227, 0.3)'
+      fill: 'rgba(247,228,191,0.3)'
     }
   },
   name: {
-    marginRight: 20
+    //marginRight: 20
   }
 }

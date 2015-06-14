@@ -29,7 +29,7 @@ const style = {
     userSelect: 'none'
   },
   position: {
-    backgroundColor: '#f2f2f2',
+    backgroundColor: 'white',
     padding: '10px 0 10px 25px'
   }
 }

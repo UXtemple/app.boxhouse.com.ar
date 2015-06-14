@@ -1,6 +1,6 @@
 import { ActionIconBlock } from 'panels-ui/blocks';
 import { CompanyRecord } from '../../records';
-import ArrowIcon from '../../../icons/arrow';
+import SettingsIcon from '../../../icons/settings';
 import React from 'react';
 
 export default class CompanyProfileCard extends React.Component {
@@ -9,7 +9,7 @@ export default class CompanyProfileCard extends React.Component {
   }
   render() {
     return (
-      <ActionIconBlock href='profile' style={style} icon={ArrowIcon} flux={this.props.flux}>
+      <ActionIconBlock href='profile' style={style} icon={SettingsIcon} flux={this.props.flux}>
         <div style={style.name}>{this.props.company.name}</div>
       </ActionIconBlock>
     );
@@ -46,6 +46,6 @@ const style = {
     }
   },
   name: {
-    marginRight: 20
+    marginRight: 10
   }
 }
