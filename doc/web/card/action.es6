@@ -22,7 +22,7 @@ const style = {
       active: {},
       base: {
         alignItems: 'center',
-        padding: '15px 15px 15px 50px'
+        padding: '15px 15px 15px 25px'
       }
     },
     icon: {

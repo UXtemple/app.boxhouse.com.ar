@@ -7,6 +7,7 @@ export default class DocTitle extends React.Component {
 }
 
 const style = {
-	color: '#00bd70',
+  color: '#00bd70',
   fontSize: 25,
+  justifyContent: 'center'
 }

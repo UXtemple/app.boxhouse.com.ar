@@ -59,11 +59,12 @@ const style = {
     background: 'white',
     borderTopLeftRadius: 5,
     borderTopRightRadius: 5,
+    padding: '20px 0 15px',
     width: '80%'
   },
   separator: {
     background: 'rgba(0, 189, 112, 0.5)',
     height: 1,
-    width: '65%'
+    width: '70%'
   }
 }
