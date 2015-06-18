@@ -1,20 +1,29 @@
 import { ActionIconBlock } from 'panels-ui/blocks';
 import ArrowIcon from '../../../icons/arrow';
+import Field from '../field';
 import React from 'react';
 
 export default class DocAction extends React.Component {
   render() {
+    const { doc } = this.props;
+
+    const fields = [{
+      disabled: true,
+      label: 'Type',
+      value: doc.type
+    }, {
+      disabled: true,
+      label: 'Number range',
+      value: `${doc.number.from} - ${doc.number.to}`
+    }].map((field, i) => <Field key={i} {...field} style={i !== 0 ? {marginTop: 20} : {}}/>);
+
     return (
       <ActionIconBlock href={this.props.doc.id} style={style.action} panels={this.props.panels} icon={ArrowIcon}>
-        <div style={style.content.wrapper}>
-          <div style={style.content.heading}>{this.props.doc.type}</div>
-          <div style={style.content.facet}>{this.props.doc.date.from} - {this.props.doc.date.to}</div>
-        </div>
+        <div style={style.fields}>{fields}</div>
       </ActionIconBlock>
     );
   }
 }
-
 
 const style = {
   action: {
@@ -34,20 +43,8 @@ const style = {
       }
     }
   },
-  content: {
-    heading: {
-      fontSize: 25
-    },
-    facet: {
-      fontSize: 15,
-      fontWeight: 400,
-      flexDirection: 'row',
-      marginTop: 10
-    },
-    wrapper: {
-      color: '#323232',
-      flexDirection: 'column',
-      flex: 1
-    }
+  fields: {
+    flexDirection: 'column',
+    flex: 1
   }
 }
