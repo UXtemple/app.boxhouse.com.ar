@@ -5,20 +5,12 @@ const baseStyle = {
 }
 
 export default class SettingsIcon extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hover: false
-    };
-  }
-
   render() {
-    const {height, style: propsStyle, width, ...props} = this.props;
-    const style = {...baseStyle, ...propsStyle};
-    let fill = this.props.fill[this.state.hover ? 'active' : 'base'];
+    const {height, width} = this.props;
+    const fill = this.props.fill;
 
     return (
-      <span style={style} {...props} onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
+      <span>
         <svg xmlns='http://www.w3.org/2000/svg' width={width} height={height} viewBox='0 0 64 64'>
           <g>
 						<path fill={fill} d="M4.667,16.667h34.656c0.692,3.234,3.569,5.667,7.006,5.667s6.314-2.433,7.006-5.667h5.998
@@ -40,20 +32,14 @@ export default class SettingsIcon extends React.Component {
   }
 
   static propTypes = {
-    fill: React.PropTypes.shape({
-      active: React.PropTypes.string.isRequired,
-      base: React.PropTypes.string.isRequired
-    }),
+    fill: React.PropTypes.string,
     height: React.PropTypes.number,
     width: React.PropTypes.number
   }
 
   static defaultProps = {
-    fill: {
-      active: 'red',
-      base: '#323232'
-    },
-    height: 64,
-    width: 64
+    fill: 'white',
+    height: 30,
+    width: 30
   }
 }

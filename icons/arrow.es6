@@ -4,7 +4,7 @@ export default class ArrowIcon extends React.Component {
 
   render() {
     const {height, width} = this.props;
-    let fill = this.props.fill;
+    const fill = this.props.fill;
 
     return (
       <span style={this.props.style}>

@@ -23,15 +23,15 @@ export default class CompanyCard extends React.Component {
 const style = {
   action: {
     base: {
-      alignSelf: 'center',
+      // alignSelf: 'center',
       alignItems: 'center',
       color: '#F7E4BF',
       flexDirection: 'row',
       fontSize: 30,
       //justifyContent: 'center',
-      margin: '25px 50px 0px 51px',
+      marginTop: 25,
       width: 'auto',
-      padding: 0
+      padding: '0 20px 0 50px'
     },
     active: {
       color: 'rgba(247,228,191,0.3)'
@@ -46,6 +46,7 @@ const style = {
     }
   },
   name: {
-    //marginRight: 20
+    flex: 1,
+    textAlign: 'center'
   }
 }
