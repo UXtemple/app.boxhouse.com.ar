@@ -45,13 +45,13 @@ const style = {
     top: {
     flexDirection: 'column',
     alignItems: 'center', 
-    background: 'linear-gradient(to bottom, #00bd70, #169B65)',
+    background: 'linear-gradient(to bottom, #00bd70, #08A575)',
     width: '100%'
     },
     bottom: {
     flexDirection: 'column',
     alignItems: 'center', 
-    background: 'linear-gradient(to top, #00bd70, #169B65, #169B65)',
+    background: 'linear-gradient(to top, #00bd70, #08A575)',
     width: '100%'
     }
   },

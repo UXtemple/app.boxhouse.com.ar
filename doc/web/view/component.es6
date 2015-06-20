@@ -32,12 +32,24 @@ export default class DocView extends Component {
 const style = {
   button: {
     editable: {
-      border: 'none',
-      outline: 0
+      background: 'none',
+      borderColor: '#00bd70',
+      borderRadius: 20,
+      borderStyle: 'solid',
+      borderWidth: 1,
+      color: '#00bd70',
+      outline: 0,
+      textTransform: 'uppercase'
     },
     saved: {
-      border: 'none',
-      outline: 0
+      background: '#00bd70',
+      borderStyle: 'solid',
+      borderColor: '#00bd70',
+      borderWidth: 1,
+      borderRadius: 20,
+      color: 'white',
+      outline: 0,
+      textTransform: 'uppercase'
     }
   }
 }

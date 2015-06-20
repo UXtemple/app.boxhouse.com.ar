@@ -3,7 +3,8 @@
   "uri": "/:boxid/:docid",
   "title": "Doc :docid in box :boxid | UXtemple @ Boxhouse",
   "style": {
-    "paddingBottom": 100
+    "paddingBottom": 100,
+    "backgroundColor": "white",
   },
   "blocks": [{
     // "type": "DocHeader",

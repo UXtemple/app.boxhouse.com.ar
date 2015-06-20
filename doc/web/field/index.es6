@@ -39,16 +39,17 @@ const style = {
   label: {
     color: 'green',
     display: 'block',
-    fontSize: 14,
+    fontSize: 13,
     textTransform: 'uppercase'
   },
   value: {
     border: 'none',
-    color: 'black',
+    color: '#7b7b7b',
     display: 'block',
-    fontSize: 22,
+    fontSize: 18,
     flexDirection: 'row',
-    marginTop: 10,
+    marginTop: 5,
+    marginLeft: 10,
     outline: 0
   }
 }

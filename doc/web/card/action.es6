@@ -36,10 +36,10 @@ const style = {
     },
     icon: {
       active: {
-        fill: '#323232'
+        fill: '#7b7b7b'
       },
       base: {
-        fill: '#323232'
+        fill: '#00bd70'
       }
     }
   },
