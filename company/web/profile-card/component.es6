@@ -9,7 +9,7 @@ export default class CompanyProfileCard extends React.Component {
   }
   render() {
     return (
-      <ActionIconBlock href='profile' style={style} icon={SettingsIcon} flux={this.props.flux}>
+      <ActionIconBlock href='profile' style={style} icon={SettingsIcon} panels={this.props.panels}>
         <div style={style.name}>{this.props.company.name}</div>
       </ActionIconBlock>
     );

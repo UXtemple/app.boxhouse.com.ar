@@ -27,7 +27,7 @@ export default class DocFields extends Component {
       value: doc.date.to
     }].map((field, i) => <Field key={i} {...field} style={i !== 0 ? {marginTop: 20} : {}}/>);
 
-    return <div>{fields}</div>;
+    return <div style={{margin: 50}}>{fields}</div>;
   }
 
   static propTypes = {

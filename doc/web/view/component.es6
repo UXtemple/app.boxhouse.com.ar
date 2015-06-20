@@ -1,5 +1,6 @@
 import { DocRecord } from '../../records';
 import Fields from './fields';
+import HeaderTitle from '../card/header/title';
 import React, { Component, PropTypes } from 'react';
 
 export default class DocView extends Component {
@@ -15,10 +16,13 @@ export default class DocView extends Component {
     const { disabled } = this.state;
     const buttonWord = disabled ? 'edit' : 'save';
     return (
-      <div>
-        <button style={style.button[disabled ? 'editable' : 'saved']}
-          onClick={() => this.setState({disabled: !disabled})}>
-          {buttonWord}</button>
+      <div style={{width: '100%'}}>
+        <div style={{flexDirection: 'row', margin: '25px 20px 0'}}>
+          <HeaderTitle style={{flex: 1, textAlign: 'center', marginLeft: 70}} />
+          <button style={style.button[disabled ? 'editable' : 'saved']}
+            onClick={() => this.setState({disabled: !disabled})}>
+            {buttonWord}</button>
+        </div>
         <Fields disabled={disabled} doc={this.props.doc} />
       </div>
     );
@@ -39,7 +43,8 @@ const style = {
       borderWidth: 1,
       color: '#00bd70',
       outline: 0,
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      width: 70
     },
     saved: {
       background: '#00bd70',
@@ -49,7 +54,8 @@ const style = {
       borderRadius: 20,
       color: 'white',
       outline: 0,
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      width: 70
     }
   }
 }

@@ -4,10 +4,12 @@ import React from 'react';
 
 export default class CompanyProfile extends React.Component {
   render() {
+    const title = `${this.props.company.name}'s profile`;
+
     return (
-      this.props.company ?
-        <TitleBlock>{this.props.company.name}</TitleBlock> :
-        <span>loading</span>
+      <div style={{color: 'white', width: '100%'}}>
+        <TitleBlock style={{margin: '25px 0 0 0', fontSize: 30, alignSelf: 'center'}}>{title}</TitleBlock>
+      </div>
     );
   }
 

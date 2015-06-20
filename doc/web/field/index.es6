@@ -12,6 +12,9 @@ export default class Field extends Component {
     const inputStyle = style.value;
     if (disabled) {
       inputStyle.cursor = 'default';
+      inputStyle.borderBottomColor = 'transparent';
+    } else {
+      inputStyle.borderBottomColor = '#00bd70';
     }
 
     return (
@@ -44,12 +47,14 @@ const style = {
   },
   value: {
     border: 'none',
+    borderBottom: '1px solid transparent',
     color: '#7b7b7b',
     display: 'block',
     fontSize: 18,
     flexDirection: 'row',
     marginTop: 5,
-    marginLeft: 10,
-    outline: 0
+    paddingLeft: 10,
+    outline: 0,
+    width: '100%'
   }
 }

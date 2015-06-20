@@ -2,7 +2,18 @@ import React from 'react';
 
 export default class DocTitle extends React.Component {
   render() {
-    return <div style={style}>004</div>;
+    const titleStyle = {
+      ...style,
+      ...this.props.style
+    }
+    return <div style={titleStyle}>004</div>;
+  }
+
+  static propTypes = {
+    style: React.PropTypes.object
+  }
+  static defaultProps = {
+    style: {}
   }
 }
 
