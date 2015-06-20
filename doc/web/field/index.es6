@@ -14,7 +14,7 @@ export default class Field extends Component {
       inputStyle.cursor = 'default';
       inputStyle.borderBottomColor = 'transparent';
     } else {
-      inputStyle.borderBottomColor = '#00bd70';
+      inputStyle.borderBottomColor = 'rgba(0,189,112,0.3)';
     }
 
     return (
