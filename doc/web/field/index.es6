@@ -37,7 +37,7 @@ const style = {
     padding: 0
   },
   label: {
-    color: 'green',
+    color: '#00bd70',
     display: 'block',
     fontSize: 13,
     textTransform: 'uppercase'
