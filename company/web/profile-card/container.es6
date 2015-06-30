@@ -1,19 +1,16 @@
-import Component from './component';
-import FluxComponent from 'flummox/component';
-import React from 'react';
+import { connect } from 'redux/react';
+import InnerComponent from './component';
+import React, { PropTypes } from 'react';
 
-export default class CompanyProfileCardContainer extends React.Component {
-  get stores() {
-    return {
-      company: store => ({company: store.id(this.props.id)})
-    };
-  }
-
+@connect(({company}) => ({company}))
+export default class CompanyProfileCardContainer {
   render() {
-    return <FluxComponent flux={this.props.flux} connectToStores={this.stores}><Component panels={this.props.panels} /></FluxComponent>;
+    return <InnerComponent {...this.props} />;
   }
 
   static propTypes = {
-    id: React.PropTypes.string.isRequired
+    company: PropTypes.shape({
+      name: PropTypes.string.isRequired
+    }).isRequired
   }
 }

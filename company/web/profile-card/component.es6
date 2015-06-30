@@ -1,22 +1,22 @@
-import { ActionIconBlock } from 'panels-ui/blocks';
-import { CompanyRecord } from '../../records';
+import { ActionWithIconBlock } from 'panels-blocks';
 import SettingsIcon from '../../../icons/settings';
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-export default class CompanyProfileCard extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+export default class CompanyProfileCard {
   render() {
+    const { name: nameStyle, ...actionStyle } = style;
+
     return (
-      <ActionIconBlock href='profile' style={style} icon={SettingsIcon} panels={this.props.panels}>
-        <div style={style.name}>{this.props.company.name}</div>
-      </ActionIconBlock>
+      <ActionWithIconBlock href='profile' style={actionStyle} icon={SettingsIcon}>
+        <div style={nameStyle}>{this.props.company.name}</div>
+      </ActionWithIconBlock>
     );
   }
 
   static propTypes = {
-    company: React.PropTypes.instanceOf(CompanyRecord) //.isRequired
+    company: PropTypes.shape({
+      name: PropTypes.string.isRequired
+    }).isRequired
   }
 }
 
@@ -28,10 +28,9 @@ const style = {
       color: '#00b3e3',
       flexDirection: 'row',
       fontSize: 30,
-      //justifyContent: 'center',
       margin: '25px 50px 0px 51px',
-      width: 'auto',
-      padding: 0
+      padding: 0,
+      width: 'auto'
     },
     active: {
       color: 'rgba(0, 179, 227, 0.3)'

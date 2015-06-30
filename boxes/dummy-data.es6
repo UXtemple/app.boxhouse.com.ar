@@ -1,4 +1,4 @@
-const DUMMY_DATA = [{
+export default [{
   id: '1',
   documentCount: 4,
   position: {
@@ -59,5 +59,3 @@ const DUMMY_DATA = [{
   full: false,
   companyId: '1'
 }];
-
-export default DUMMY_DATA;
