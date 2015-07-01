@@ -6,7 +6,7 @@ export default {
   entry: [
     'webpack-dev-server/client?http://localhost:3001',
     'webpack/hot/only-dev-server',
-    './playground/web/playground.es6'
+    './web/playground/playground.es6'
   ],
   output: {
     path: path.join(__dirname, 'dist'),

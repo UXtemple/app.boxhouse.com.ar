@@ -5,12 +5,12 @@ import sendfile from 'koa-sendfile';
 import serve from 'koa-static';
 
 let app = koa();
-app.use(serve('./playground'));
+app.use(serve('./web/playground'));
 app.use(catchAll);
 app.listen(3000);
 
 function *catchAll(next) {
-  yield* sendfile.call(this, './playground/web/index.html');
+  yield* sendfile.call(this, './web/playground/index.html');
 
   if (!this.status) {
     this.throw(404);

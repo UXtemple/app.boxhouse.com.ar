@@ -5,7 +5,7 @@ import WebpackDevServer from 'webpack-dev-server';
 import config from './webpack.config';
 
 new WebpackDevServer(webpack(config), {
-  contentBase: './playground/web',
+  contentBase: './web/playground',
   historyApiFallback: true,
   hot: true,
   publicPath: config.output.publicPath,
