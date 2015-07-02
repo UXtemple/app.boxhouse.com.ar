@@ -1,15 +1,16 @@
-import Boxes from '../boxes/list';
-// import BoxesTools from '../box/web/tools/component';
 import CompanyProfileCard from '../company/profile/card';
+import List from './list';
+import Tools from './tools';
 import { Panel } from 'panels-ui';
 import React from 'react';
 
-export default class Home {
+export default class Boxes {
   render() {
     return (
       <Panel style={style}>
         <CompanyProfileCard />
-        <Boxes />
+        <Tools />
+        <List />
       </Panel>
     );
   }

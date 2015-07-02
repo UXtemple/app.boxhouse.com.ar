@@ -1,5 +1,4 @@
 import * as t from './action-types';
-import { ADD, REMOVE } from './action-types';
 import { v4 as uuid } from 'node-uuid';
 
 export function add({full, position}) {

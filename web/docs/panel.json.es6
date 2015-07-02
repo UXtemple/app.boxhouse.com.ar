@@ -5,5 +5,5 @@ export default {
   },
   "path": "/:boxid",
   "title": "Box :boxid | UXtemple @ Boxhouse",
-  "typeName": "Box"
+  "typeName": "Docs"
 };

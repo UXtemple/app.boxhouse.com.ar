@@ -1,4 +1,4 @@
-import DeleteIcon from '../../../../icons/delete';
+import DeleteIcon from '../../../icons/delete';
 import React from 'react';
 
 export default class Delete extends React.Component  {

@@ -1,3 +1,2 @@
-export { default as Actions } from './actions';
-export * as Records from './records';
-export { default as Store } from './store';
+export * as actions from './actions';
+export reducer from './reducer';

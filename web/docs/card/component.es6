@@ -1,8 +1,9 @@
+import docShape from '../shape';
 import DocAction from './action';
 import DocHeader from './header';
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-export default class DocCardDoc extends React.Component {
+export default class DocCard {
   render() {
     return (
       <div style={style.card}>
@@ -22,6 +23,10 @@ export default class DocCardDoc extends React.Component {
       </div>
     );
   }
+
+  static propTypes = {
+    doc: docShape.isRequired
+  }
 }
 
 const style = {
@@ -32,6 +37,12 @@ const style = {
     width: '80%'
   },
   card: {
+    alignItems: 'center',
+    marginTop: 25,
+    MozUserSelect: 'none',
+    MsUserSelect: 'none',
+    WebkitUserSelect: 'none',
+    userSelect: 'none',
     width: '100%'
   },
   hanger: {

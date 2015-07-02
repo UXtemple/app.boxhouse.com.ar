@@ -16,8 +16,13 @@ export default class BoxPosition {
     );
   }
 
+  defaultProps = {
+    style: {}
+  }
+
   static propTypes = {
-    box: boxShape.isRequired
+    box: boxShape.isRequired,
+    style: PropTypes.object
   }
 }
 

@@ -1,12 +1,22 @@
-import { Actions } from 'flummox';
-import { DocRecord } from './records';
+import * as t from './action-types';
+import { v4 as uuid } from 'node-uuid';
 
-export default class DocActions extends Actions {
-  add(doc) {
-    return DocRecord.from(doc);
+export function add({boxId, category, companyId, date, number, office, type}) {
+  return {
+    type: t.ADD,
+    boxId,
+    category,
+    companyId,
+    date,
+    id: uuid(),
+    number,
+    office
   }
+}
 
-  loadDocs(docs) {
-    return docs.map(doc => DocRecord.from(doc));
+export function remove(id) {
+  return {
+    type: t.REMOVE,
+    id
   }
 }

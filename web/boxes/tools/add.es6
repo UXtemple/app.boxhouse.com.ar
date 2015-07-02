@@ -1,12 +1,7 @@
 import React from 'react';
-import PlusIcon from '../../../icons/plus';
+import PlusIcon from '../../icons/plus';
 
 export default class BoxAdd extends React.Component  {
-  constructor(props) {
-    super(props);
-    this.add = props.flux.getActions('box').add;
-  }
-
   render() {
     return <PlusIcon {...iconProps} onClick={() => this.add({companyId: '1'})} />;
   }

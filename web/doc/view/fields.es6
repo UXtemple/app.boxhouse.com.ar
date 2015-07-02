@@ -1,8 +1,7 @@
-import { DocRecord } from '../../records';
-import Field from '../field';
-import React, { Component, PropTypes } from 'react';
+import Field from '../../docs/field';
+import React, { PropTypes } from 'react';
 
-export default class DocFields extends Component {
+export default class DocFields {
   render() {
     const { disabled, doc } = this.props;
     const fields = [{
@@ -31,6 +30,6 @@ export default class DocFields extends Component {
   }
 
   static propTypes = {
-    doc: PropTypes.arrayOf(DocRecord) //.isRequired
+    // doc: PropTypes.arrayOf().isRequired
   }
 }

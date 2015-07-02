@@ -1,17 +1,18 @@
-import box from '../../box/panel.json';
-import home from '../../home/panel.json';
+import boxes from '../../boxes/panel.json';
+import doc from '../../doc/panel.json';
+import docs from '../../docs/panel.json';
+import i from 'seamless-immutable';
 
 // import companyPanel from '../../company/panel.json';
 // import dashboardPanel from '../../dashboard/panel.json';
-// import docPanel from '../../doc/panel.json';
-import i from 'seamless-immutable';
 
 export default i({
   'uxtemple.boxhouse.com.dev:3000': {
-    lookup: ['/:boxid'],
+    lookup: ['/:boxid', '/:boxid/:docid'],
     panels: {
-      '/': home,
-      '/:boxid': box
+      '/': boxes,
+      '/:boxid': docs,
+      '/:boxid/:docid': doc
     }
   }
 });

@@ -1,6 +1,5 @@
-import { DocRecord } from '../../records';
 import Fields from './fields';
-import HeaderTitle from '../card/header/title';
+import HeaderTitle from '../../docs/card/header/title';
 import React, { Component, PropTypes } from 'react';
 
 export default class DocView extends Component {
@@ -29,7 +28,7 @@ export default class DocView extends Component {
   }
 
   static propTypes = {
-    doc: PropTypes.arrayOf(DocRecord) //.isRequired
+    // doc: PropTypes. //.isRequired
   }
 }
 
