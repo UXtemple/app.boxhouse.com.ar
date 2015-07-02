@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchIcon from '../../../icons/search';
+import SearchIcon from '../../icons/search';
 
 export default class DashboardSearch extends React.Component  {
   render() {

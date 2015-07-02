@@ -1,4 +1,5 @@
 import boxes from '../../boxes/panel.json';
+import dashboard from '../../dashboard/panel.json';
 import doc from '../../doc/panel.json';
 import docs from '../../docs/panel.json';
 import i from 'seamless-immutable';
@@ -13,6 +14,12 @@ export default i({
       '/': boxes,
       '/:boxid': docs,
       '/:boxid/:docid': doc
+    }
+  },
+  'dashboard.boxhouse.com.dev:3000': {
+    lookup: [],
+    panels: {
+      '/': dashboard
     }
   }
 });

@@ -1,12 +1,7 @@
 import React from 'react';
-import PlusIcon from '../../../icons/plus';
+import PlusIcon from '../../icons/plus';
 
-export default class DashboardAdd extends React.Component  {
-  constructor(props) {
-    super(props);
-    this.add = props.flux.getActions('company').add;
-  }
-
+export default class DashboardAdd {
   render() {
     return <PlusIcon {...iconProps} onClick={() => this.add({})} />;
   }
