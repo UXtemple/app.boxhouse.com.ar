@@ -1,7 +1,7 @@
 import * as t from './action-types';
 import { v4 as uuid } from 'node-uuid';
 
-export function add({full, position}) {
+export function add({full=false, position={shelf: 1, rack: 1, height: 1, position: 1, depth: 1}}={}) {
   return {
     type: t.ADD,
     full,

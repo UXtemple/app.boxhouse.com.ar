@@ -1,7 +1,7 @@
 import * as t from './action-types';
 import { v4 as uuid } from 'node-uuid';
 
-export function add({boxId, category, companyId, date, number, office, type}) {
+export function add({boxId, category, companyId, date={from: '1m ago', to: 'today'}, number={from: 1, to: 100}, office, type}={}) {
   return {
     type: t.ADD,
     boxId,

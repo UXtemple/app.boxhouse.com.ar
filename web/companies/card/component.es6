@@ -1,13 +1,13 @@
-import { ActionWithIconBlock } from 'panels-blocks';
+import { ActionWithIcon } from 'panels-blocks';
 import ArrowIcon from '../../icons/arrow';
 import React from 'react';
 
 export default class CompanyCard {
   render() {
     return (
-      <ActionWithIconBlock href={this.props.company.uri} style={style} icon={ArrowIcon} {...this.props}>
+      <ActionWithIcon href={this.props.company.uri} style={style} icon={ArrowIcon} {...this.props}>
         <div style={style.name}>{this.props.company.name}</div>
-      </ActionWithIconBlock>
+      </ActionWithIcon>
     );
   }
 

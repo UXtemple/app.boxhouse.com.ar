@@ -17,7 +17,7 @@ export default class DeleteIcon extends React.Component {
     let fill = this.props.fill[this.state.hover ? 'active' : 'base'];
 
     return (
-      <span style={{...style, ...this.props.style}} onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
+      <span style={{...style, ...this.props.style}} onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})} onClick={this.props.onClick}>
         <svg xmlns='http://www.w3.org/2000/svg' width={width} height={height} viewBox='0 0 64 64'>
           <g>
             <path fill={fill} d="M32,52.041c0.552,0,1-0.447,1-1V26.315c0-0.552-0.447-1-1-1s-1,0.448-1,1v24.726
@@ -45,6 +45,7 @@ export default class DeleteIcon extends React.Component {
       base: React.PropTypes.string.isRequired
     }),
     height: React.PropTypes.number,
+    onClick: React.PropTypes.func,
     width: React.PropTypes.number
   }
 

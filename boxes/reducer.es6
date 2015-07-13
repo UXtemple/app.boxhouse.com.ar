@@ -10,15 +10,9 @@ export default function boxesReducer(state = i({}), {type, ...payload}) {
   }
 }
 
-// position = {
-//   shelf: undefined,
-//   rack:  undefined,
-//   height: undefined,
-//   position: undefined,
-//   depth: undefined
-// }
+// FIXME why do I need immutable again?
 function add(state, {full=false, id, position}) {
-  return state.merge({[id]: {full, id, position}});
+  return i(state).merge({[id]: {full, id, position}});
 }
 
 function remove(state, {id}) {

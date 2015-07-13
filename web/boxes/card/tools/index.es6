@@ -1,18 +1,22 @@
-import Add from './add';
+import { actions as boxesActions } from '../../../../boxes';
+import { actions as docsActions } from '../../../../docs';
+import Add from '../../../icons/plus';
 import Capacity from './capacity';
-import Delete from './delete';
-import Separator from './separator';
 import React from 'react';
+import Remove from '../../../icons/delete';
+import Separator from './separator';
 
 export default class BoxTools {
   render() {
+    const { box: {id}, dispatch } = this.props;
+
     return (
       <div style={style.tools}>
-        <Delete style={style.tool} {...this.props} />
+        <Remove style={style.tool} {...toolProps} onClick={() => dispatch(boxesActions.remove(id))} />
         <Separator />
         <Capacity style={style.tool} {...this.props} />
         <Separator />
-        <Add style={style.tool} {...this.props} />
+        <Add style={style.tool} {...toolProps} onClick={() => dispatch(docsActions.add({boxId: id}))} />
       </div>
     );
   }
@@ -33,3 +37,12 @@ const style = {
     width: '30%'
   }
 }
+
+const toolProps = {
+  fill: {
+    active: 'rgba(255,255,255,0.5)',
+    base: 'white'
+  },
+  height: 35,
+  width: 35
+};

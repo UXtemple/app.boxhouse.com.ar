@@ -1,4 +1,4 @@
-import { ActionWithIconBlock } from 'panels-blocks';
+import { ActionWithIcon } from 'panels-blocks';
 import companyShape from '../../shape';
 import SettingsIcon from '../../../icons/settings';
 import React, { PropTypes } from 'react';
@@ -8,14 +8,19 @@ export default class CompanyProfileCard {
     const { name: nameStyle, ...actionStyle } = style;
 
     return (
-      <ActionWithIconBlock href='profile' icon={SettingsIcon} style={actionStyle}>
+      <ActionWithIcon href='profile' icon={SettingsIcon} style={actionStyle}>
         <div style={nameStyle}>{this.props.company.name}</div>
-      </ActionWithIconBlock>
+      </ActionWithIcon>
     );
   }
 
   static propTypes = {
     company: companyShape.isRequired
+  }
+
+  static contextTypes = {
+    isActive: PropTypes.func.isRequired,
+    navigate: PropTypes.func.isRequired
   }
 }
 

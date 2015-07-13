@@ -1,16 +1,20 @@
-import { ActionWithIconBlock } from 'panels-blocks';
+import { actions as boxesActiveActions } from '../../../boxes-active';
+import { ActionWithIcon } from 'panels-blocks';
 import ArrowIcon from '../../icons/arrow';
 import React from 'react';
 
 export default class Action {
   render() {
+    const { id } = this.props.box;
+    const setActiveBox = () => this.props.dispatch(boxesActiveActions.set(id));
+
     return (
-      <ActionWithIconBlock href={this.props.box.id} icon={ArrowIcon} style={style.action}>
+      <ActionWithIcon href={id} icon={ArrowIcon} style={style.action} onClick={setActiveBox}>
         <div style={style.documentCount.wrapper}>
-          <div style={style.documentCount.number}>{this.props.box.documentCount}</div>
+          <div style={style.documentCount.number}>{this.props.documentCount}</div>
           <div style={style.documentCount.label}>documents inside</div>
         </div>
-      </ActionWithIconBlock>
+      </ActionWithIcon>
     );
   }
 }

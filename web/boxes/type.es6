@@ -1,18 +1,26 @@
+import { Panel } from 'panels-ui';
 import CompanyProfileCard from '../company/profile/card';
 import List from './list';
+import React, { PropTypes } from 'react';
 import Tools from './tools';
-import { Panel } from 'panels-ui';
-import React from 'react';
 
 export default class Boxes {
   render() {
+    const { redux: { dispatch } } = this.context;
+
     return (
       <Panel style={style}>
         <CompanyProfileCard />
-        <Tools />
+        <Tools dispatch={dispatch} />
         <List />
       </Panel>
     );
+  }
+
+  static contextTypes = {
+    redux: PropTypes.shape({
+      dispatch: PropTypes.func.isRequired
+    }).isRequired
   }
 }
 

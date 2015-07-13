@@ -18,7 +18,7 @@ export default class PlusIcon extends React.Component {
     let fill = this.props.fill[this.state.hover ? 'active' : 'base'];
 
     return (
-      <span style={style} {...props} onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})}>
+      <span style={style} {...props} onMouseEnter={() => this.setState({hover: true})} onMouseLeave={() => this.setState({hover: false})} onClick={this.props.onClick}>
         <svg xmlns='http://www.w3.org/2000/svg' width={width} height={height} viewBox='0 0 64 64'>
           <g>
             <path fill={fill} d="M43.15,30.969H32.807V20.625c0-0.829-0.671-1.5-1.5-1.5s-1.5,0.671-1.5,1.5v10.344H19.462
@@ -39,6 +39,7 @@ export default class PlusIcon extends React.Component {
       base: React.PropTypes.string.isRequired
     }),
     height: React.PropTypes.number,
+    onClick: React.PropTypes.func,
     width: React.PropTypes.number
   }
 

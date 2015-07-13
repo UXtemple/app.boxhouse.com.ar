@@ -1,5 +1,5 @@
 import { Panel } from 'panels-ui';
-import { TitleBlock } from 'panels-blocks';
+import { Title } from 'panels-blocks';
 import Companies from '../companies/list';
 import React from 'react';
 import Tools from './tools';
@@ -8,7 +8,7 @@ export default class Dashboard {
   render() {
     return (
       <Panel style={style.panel}>
-        <TitleBlock>Dashboard</TitleBlock>
+        <Title style={style.title}>Dashboard</Title>
         <Tools />
         <Companies />
       </Panel>

@@ -1,7 +1,6 @@
 export default {
   '1': {
     id: '1',
-    documentCount: 4,
     position: {
       shelf: 1,
       rack: 1,
@@ -14,7 +13,6 @@ export default {
   },
   '2': {
     id: '2',
-    documentCount: 3,
     position: {
       shelf: 1,
       rack: 1,
@@ -27,7 +25,6 @@ export default {
   },
   '3': {
     id: '3',
-    documentCount: 300,
     position: {
       shelf: 1,
       rack: 1,
@@ -40,7 +37,6 @@ export default {
   },
   '4': {
     id: '4',
-    documentCount: 1000,
     position: {
       shelf: 1,
       rack: 1,
@@ -53,7 +49,6 @@ export default {
   },
   '5': {
     id: '5',
-    documentCount: 3,
     position: {
       shelf: 1,
       rack: 1,

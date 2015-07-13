@@ -1,10 +1,11 @@
 import * as DUMMY_DATA from './dummy-data';
 import { createPanelsRuntime } from 'panels-runtime';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 const instance = createPanelsRuntime(DUMMY_DATA);
 
-React.render(<instance.App />, document.getElementById('playground-container'));
+ReactDOM.render(<instance.App />, document.getElementById('playground-container'));
 
 window.Playground = {
   boxhouse: {

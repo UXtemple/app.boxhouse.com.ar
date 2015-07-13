@@ -1,4 +1,4 @@
-import { ActionIconBlock } from 'panels-ui/blocks';
+import { ActionIcon } from 'panels-blocks';
 import { CompanyRecord } from '../../records';
 import ArrowIcon from '../../../icons/arrow';
 import React from 'react';
@@ -9,9 +9,9 @@ export default class CompanyCard extends React.Component {
   }
   render() {
     return (
-      <ActionIconBlock href={this.props.company.uri} style={style} icon={ArrowIcon} {...this.props}>
+      <ActionIcon href={this.props.company.uri} style={style} icon={ArrowIcon} {...this.props}>
         <div style={style.name}>{this.props.company.name}</div>
-      </ActionIconBlock>
+      </ActionIcon>
     );
   }
 
