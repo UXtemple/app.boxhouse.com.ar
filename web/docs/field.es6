@@ -1,21 +1,22 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class Field extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: `${props.label}-${new Date().getTime()}`
+    }
+  }
+
   render() {
+    const { id } = this.state;
     const { disabled, label, value } = this.props;
     const fieldStyle = {
       ...style.field,
       ...this.props.style
     }
-    const id = `${label}-${new Date().getTime()}`;
 
-    const inputStyle = style.value;
-    if (disabled) {
-      inputStyle.cursor = 'default';
-      inputStyle.borderBottomColor = 'transparent';
-    } else {
-      inputStyle.borderBottomColor = 'rgba(0,189,112,0.3)';
-    }
+    const inputStyle = disabled ? style.value : {...style.value, ...style.valueEnabled};
 
     return (
       <fieldset style={fieldStyle} disabled={disabled}>
@@ -29,7 +30,10 @@ export default class Field extends Component {
     disabled: PropTypes.bool.isRequired,
     label: PropTypes.string.isRequired,
     style: PropTypes.object,
-    value: PropTypes.string.isRequired
+    value: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string
+    ]).isRequired
   }
 }
 
@@ -48,7 +52,9 @@ const style = {
   value: {
     border: 'none',
     borderBottom: '1px solid transparent',
+    borderBottomColor: 'transparent',
     color: '#7b7b7b',
+    cursor: 'default',
     display: 'block',
     fontSize: 18,
     flexDirection: 'row',
@@ -56,5 +62,9 @@ const style = {
     paddingLeft: 10,
     outline: 0,
     width: '100%'
+  },
+  valueEnabled: {
+    borderBottomColor: 'rgba(0,189,112,0.3)',
+    cursor: 'pointer'
   }
 }

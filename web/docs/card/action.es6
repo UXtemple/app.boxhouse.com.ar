@@ -19,8 +19,12 @@ export default class DocAction extends React.Component {
 
     return (
       <Action href={doc.id} style={style.action}>
-        <div style={style.fields}>{fields}</div>
-        <ArrowIcon style={style.icon} />
+        {active => (
+          <div style={{alignItems: 'center', flexDirection: 'row'}}>
+            <div style={style.fields}>{fields}</div>
+            <ArrowIcon fill={style.icon[active ? 'active' : 'base']} />
+          </div>
+        )}
       </Action>
     );
   }
@@ -35,12 +39,8 @@ const style = {
     }
   },
   icon: {
-    active: {
-      fill: '#7b7b7b'
-    },
-    base: {
-      fill: '#00bd70'
-    }
+    active: '#7b7b7b',
+    base: '#00bd70'
   },
   fields: {
     flexDirection: 'column',

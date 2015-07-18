@@ -1,7 +1,7 @@
 export default {
   "app": "uxtemple.boxhouse.com.dev:3000",
   "data": {
-    "id": ":docid",
+    "docId": ":docid",
     "boxId": ":boxid"
   },
   "path": "/:boxid/:docid",

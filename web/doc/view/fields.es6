@@ -1,3 +1,4 @@
+import docShape from '../../docs/shape';
 import Field from '../../docs/field';
 import React, { PropTypes } from 'react';
 
@@ -30,6 +31,7 @@ export default class DocFields {
   }
 
   static propTypes = {
-    // doc: PropTypes.arrayOf().isRequired
+    disabled: PropTypes.bool.isRequired,
+    doc: docShape.isRequired
   }
 }
