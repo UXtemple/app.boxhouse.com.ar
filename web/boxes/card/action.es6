@@ -1,35 +1,41 @@
-import { actions as boxesActiveActions } from '../../../boxes-active';
-import { ActionWithIcon } from 'panels-blocks';
+import { Action } from 'panels-blocks';
 import ArrowIcon from '../../icons/arrow';
-import React from 'react';
+import boxShape from '../shape';
+import React, { PropTypes } from 'react';
 
-export default class Action {
+export default class BoxCardAction {
   render() {
-    const { id } = this.props.box;
-    const setActiveBox = () => this.props.dispatch(boxesActiveActions.set(id));
+    const { documentCount, box } = this.props;
 
     return (
-      <ActionWithIcon href={id} icon={ArrowIcon} style={style.action} onClick={setActiveBox}>
+      <Action href={box.id} style={style.action}>
         <div style={style.documentCount.wrapper}>
-          <div style={style.documentCount.number}>{this.props.documentCount}</div>
+          <div style={style.documentCount.number}>{documentCount}</div>
           <div style={style.documentCount.label}>documents inside</div>
         </div>
-      </ActionWithIcon>
+        <ArrowIcon />
+      </Action>
     );
+  }
+
+  static defaultTypes = {
+    documentCount: 0
+  }
+
+  static propTypes = {
+    documentCount: PropTypes.number,
+    box: boxShape.isRequired
   }
 }
 
 
 const style = {
   action: {
-    action: {
-      active: {},
-      base: {
-        alignItems: 'center',
-        padding: 25
-      }
-    },
-    icon: {}
+    active: {},
+    base: {
+      alignItems: 'center',
+      padding: 25
+    }
   },
   documentCount: {
     number: {

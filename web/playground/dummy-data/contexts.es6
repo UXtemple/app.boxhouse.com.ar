@@ -10,11 +10,7 @@ const boxhouseDashboardContext = createBoxhouseDashboard({
 });
 
 const uxtempleBoxhouseContext = createBoxhouseApp({
-  company: i({
-    id: '1',
-    name: 'UXtemple',
-    uri: 'http://uxtemple.boxhouse.com.dev:3000/'
-  }),
+  companies: i(COMPANIES_DUMMY_DATA),
   boxes: i(BOXES_DUMMY_DATA),
   docs: i(DOCS_DUMMY_DATA)
 });

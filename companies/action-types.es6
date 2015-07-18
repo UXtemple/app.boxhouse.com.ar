@@ -1,2 +1,2 @@
-export const ADD = 'DOCS:ADD';
-export const REMOVE = 'DOCS:REMOVE';
+export const ADD = 'COMPANIES:ADD';
+export const REMOVE = 'COMPANIES:REMOVE';

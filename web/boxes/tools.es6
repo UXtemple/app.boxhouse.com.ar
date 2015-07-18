@@ -1,18 +1,21 @@
-import { actions } from '../../boxes';
 import Add from '../icons/plus';
 import Search from '../icons/search';
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 export default class BoxesTools {
   render() {
-    const { dispatch } = this.props;
+    const { add } = this.props;
 
     return (
       <div style={style}>
         <Search style={style.tool} {...toolProps} />
-        <Add style={style.tool} {...toolProps} onClick={() => dispatch(actions.add())} />
+        <Add style={style.tool} {...toolProps} onClick={add} />
       </div>
     );
+  }
+
+  static propTypes = {
+    add: PropTypes.func.isRequired
   }
 }
 
@@ -23,7 +26,7 @@ const style = {
   alignItems: 'center',
   margin: '25px 0 25px 0',
   width: 80
-}
+};
 
 const toolProps = {
   fill: {

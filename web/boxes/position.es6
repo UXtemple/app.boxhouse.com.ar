@@ -1,4 +1,4 @@
-import boxShape from '../shape';
+import boxShape from './shape';
 import React, { PropTypes } from 'react';
 
 export default class BoxPosition {
@@ -16,7 +16,7 @@ export default class BoxPosition {
     );
   }
 
-  defaultProps = {
+  static defaultProps = {
     style: {}
   }
 
