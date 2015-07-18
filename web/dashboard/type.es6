@@ -1,18 +1,30 @@
+import { connect } from 'redux/react';
+import { list } from '../../companies/getters';
 import { Panel } from 'panels-ui';
 import { Title } from 'panels-blocks';
-import Companies from '../companies/list';
-import React from 'react';
+import companyShape from '../company/shape';
+import List from '../companies/list';
+import React, { PropTypes } from 'react';
 import Tools from './tools';
 
+@connect(state => ({
+  companies: list(state.companies)
+}))
 export default class Dashboard {
   render() {
+    const { companies } = this.props;
+
     return (
       <Panel style={style.panel}>
         <Title style={style.title}>Dashboard</Title>
         <Tools />
-        <Companies />
+        <List companies={companies} />
       </Panel>
     );
+  }
+
+  static propTypes = {
+    companies: PropTypes.arrayOf(companyShape).isRequired
   }
 }
 
