@@ -1,18 +1,21 @@
-import { actions } from '../../docs';
 import Add from '../icons/plus';
 import Search from '../icons/search';
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 export default class DocsTools {
   render() {
-    const { boxId, dispatch } = this.props;
+    const { addDoc } = this.props;
 
     return (
       <div style={style}>
         <Search style={style.tool} {...toolProps} />
-        <Add style={style.tool} {...toolProps} onClick={() => dispatch(actions.add({boxId}))} />
+        <Add style={style.tool} {...toolProps} onClick={addDoc} />
       </div>
     );
+  }
+
+  static propTypes = {
+    addDoc: PropTypes.func.isRequired
   }
 }
 

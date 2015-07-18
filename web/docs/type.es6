@@ -1,20 +1,36 @@
+import { actions } from '../../docs';
+import { connect } from 'redux/react';
+import { listForBox } from '../../docs/getters';
 import { Panel } from 'panels-ui';
 import BoxPosition from '../boxes/position';
+import boxShape from '../boxes/shape';
+import docShape from './shape';
 import List from './list';
 import React, { PropTypes } from 'react';
 import Tools from './tools';
 
+@connect((state, {boxId}) => ({
+  box: state.boxes[boxId],
+  docs: listForBox(state.docs, boxId)
+}))
 export default class Docs {
   render() {
-    const { boxId } = this.props;
+    const { box, boxId, dispatch, docs } = this.props;
+    const addDoc = () => dispatch(actions.add({boxId}))
 
     return (
       <Panel style={style.panel}>
-        <BoxPosition style={style.boxPosition} id={boxId} />
-        <Tools boxId={boxId} />
-        <List boxId={boxId} />
+        <BoxPosition box={box} style={style.boxPosition} />
+        <Tools addDoc={addDoc} />
+        <List docs={docs} />
       </Panel>
     );
+  }
+
+  static propTypes = {
+    box: boxShape.isRequired,
+    boxId: PropTypes.string.isRequired,
+    docs: PropTypes.arrayOf(docShape).isRequired
   }
 }
 

@@ -1,4 +1,4 @@
-import { ActionWithIcon } from 'panels-blocks';
+import { Action } from 'panels-blocks';
 import ArrowIcon from '../../icons/arrow';
 import Field from '../field';
 import React from 'react';
@@ -18,29 +18,28 @@ export default class DocAction extends React.Component {
     }].map((field, i) => <Field key={i} {...field} style={i !== 0 ? {marginTop: 20} : {}}/>);
 
     return (
-      <ActionWithIcon href={this.props.doc.id} style={style.action} icon={ArrowIcon}>
+      <Action href={doc.id} style={style.action}>
         <div style={style.fields}>{fields}</div>
-      </ActionWithIcon>
+        <ArrowIcon style={style.icon} />
+      </Action>
     );
   }
 }
 
 const style = {
   action: {
-    action: {
-      active: {},
-      base: {
-        alignItems: 'center',
-        padding: '15px 15px 15px 25px'
-      }
+    active: {},
+    base: {
+      alignItems: 'center',
+      padding: '15px 15px 15px 25px'
+    }
+  },
+  icon: {
+    active: {
+      fill: '#7b7b7b'
     },
-    icon: {
-      active: {
-        fill: '#7b7b7b'
-      },
-      base: {
-        fill: '#00bd70'
-      }
+    base: {
+      fill: '#00bd70'
     }
   },
   fields: {

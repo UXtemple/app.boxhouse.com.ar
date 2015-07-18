@@ -11,7 +11,6 @@ export default {
       to: 3345
     },
     boxId: '1',
-    companyId: '1',
     office: 'Devoto'
   },
   '2': {
@@ -26,7 +25,6 @@ export default {
       to: 3195
     },
     boxId: '1',
-    companyId: '1',
     office: 'Brinkmann'
   },
   '3': {
@@ -41,7 +39,6 @@ export default {
       to: 2097
     },
     boxId: '1',
-    companyId: '1',
     office: 'Galvez'
   },
   '4': {
@@ -56,7 +53,6 @@ export default {
       to: 3345
     },
     boxId: '2',
-    companyId: '1',
     office: 'Devoto'
   },
   '5': {
@@ -71,7 +67,6 @@ export default {
       to: 3195
     },
     boxId: '2',
-    companyId: '1',
     office: 'Brinkmann'
   },
   '6': {
@@ -86,7 +81,6 @@ export default {
       to: 2097
     },
     boxId: '3',
-    companyId: '1',
     office: 'Galvez'
   },
   '7': {
@@ -101,7 +95,6 @@ export default {
       to: 3345
     },
     boxId: '4',
-    companyId: '1',
     office: 'Devoto'
   },
   '8': {
@@ -116,7 +109,6 @@ export default {
       to: 3195
     },
     boxId: '5',
-    companyId: '1',
     office: 'Brinkmann'
   },
   '9': {
@@ -131,7 +123,6 @@ export default {
       to: 2097
     },
     boxId: '5',
-    companyId: '1',
     office: 'Galvez'
   }
 };

@@ -9,8 +9,8 @@ export default function docsReducer(state = i({}), {type, ...payload}) {
   }
 }
 
-function add(state, {boxId, category, companyId, date, id, number, office, type}) {
-  return state.merge({[id]: {boxId, category, companyId, date, id, number, office, type}});
+function add(state, {boxId, category, date, id, number, office, type}) {
+  return state.merge({[id]: {boxId, category, date, id, number, office, type}});
 }
 
 function remove(state, {id}) {
