@@ -31,10 +31,9 @@
   "dependencies": {
     "invariant": "^2.1.0",
     "node-uuid": "^1.4.3",
-    "panels-blocks": "^0.3.0",
-    "panels-runtime": "^0.2.0",
-    "panels-ui": "^0.4.0",
-    "pouchdb": "^3.6.0",
+    "panels-blocks": "^0.3.1",
+    "panels-runtime": "^0.3.0",
+    "panels-ui": "^0.4.1",
     "react": "^0.14.0-beta1",
     "react-dom": "^0.14.0-beta1",
     "redux": "0.12.0",
