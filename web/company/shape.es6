@@ -1,5 +1,7 @@
 import { PropTypes } from 'react';
 
 export default PropTypes.shape({
-  name: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  uri: PropTypes.string.isRequired
 });

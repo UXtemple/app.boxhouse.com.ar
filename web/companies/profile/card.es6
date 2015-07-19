@@ -1,26 +1,26 @@
-import { ActionWithIcon } from 'panels-blocks';
-import companyShape from '../../shape';
-import SettingsIcon from '../../../icons/settings';
+import { Action } from 'panels-blocks';
+import companyShape from '../../company/shape';
 import React, { PropTypes } from 'react';
+import SettingsIcon from '../../icons/settings';
 
 export default class CompanyProfileCard {
   render() {
-    const { name: nameStyle, ...actionStyle } = style;
+    const { company } = this.props;
 
     return (
-      <ActionWithIcon href='profile' icon={SettingsIcon} style={actionStyle}>
-        <div style={nameStyle}>{this.props.company.name}</div>
-      </ActionWithIcon>
+      <Action href='profile' style={style.action}>
+        {active => (
+          <div style={{flexDirection: 'row', alignItems: 'center'}}>
+            <div style={style.name}>{company.name}</div>
+            <SettingsIcon {...style.icon[active ? 'active' : 'base']} />
+          </div>
+        )}
+      </Action>
     );
   }
 
   static propTypes = {
     company: companyShape.isRequired
-  }
-
-  static contextTypes = {
-    isActive: PropTypes.func.isRequired,
-    navigate: PropTypes.func.isRequired
   }
 }
 

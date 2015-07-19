@@ -5,7 +5,7 @@ import { Panel } from 'panels-ui';
 import { listForCompany } from '../../boxes/getters';
 import boxShape from './shape';
 import companyShape from '../company/shape';
-import CompanyProfileCard from '../company/profile/card';
+import CompanyProfileCard from '../companies/profile/card';
 import List from './list';
 import React, { PropTypes } from 'react';
 import Tools from './tools';
