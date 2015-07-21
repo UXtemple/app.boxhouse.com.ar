@@ -9,5 +9,5 @@ export default class Separator {
 const style = {
   backgroundColor: 'rgba(255,255,255,0.3)',
   margin: '25px 2.25%',
-  width: '0.5%'
+  width: 1
 }
