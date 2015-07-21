@@ -13,6 +13,7 @@ export default class BoxCard {
       <div style={style.card}>
         <div style={boxStyle}>
           <Action box={box} />
+          <div style={{backgroundColor: 'rgba(255,255,255,0.3)', height: 1, margin: '0 15px'}} />
           <Tools addDoc={addDoc} box={box} removeBox={removeBox} toggleBoxFull={toggleBoxFull} />
         </div>
         <Position box={box} style={style.position} />
