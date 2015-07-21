@@ -8,5 +8,10 @@ export default {
     id: '2',
     name: 'Boxhouse',
     uri: 'http://boxhouse.boxhouse.com.dev:3000/'
+  },
+  '3': {
+    id: '3',
+    name: 'Company Name',
+    uri: 'http://companyname.boxhouse.com.dev:3000/'
   }
 };

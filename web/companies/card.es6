@@ -7,11 +7,13 @@ export default class CompanyCard {
     const { company } = this.props;
 
     return (
-      <Action href={company.uri} style={style.action}>
-        {active => (
-          <div style={{alignSelf: 'center'}}>{company.name}</div>
-        )}
-      </Action>
+      <div style={{alignSelf: 'center', borderBottom: '1px solid rgba(247,228,191,0.3)', width: '75%'}}>
+        <Action href={company.uri} style={style.action}>
+          {active => (
+            <div style={{alignSelf: 'center'}}>{company.name}</div>
+          )}
+        </Action>
+      </div>
     );
   }
 
@@ -27,7 +29,7 @@ const style = {
       color: '#F7E4BF',
       flexDirection: 'row',
       fontSize: 25,
-      marginTop: 25
+      margin: '15px 0 15px 0'
     },
     active: {
       color: 'rgba(247,228,191,0.3)'
