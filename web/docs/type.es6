@@ -15,11 +15,11 @@ import Tools from './tools';
 }))
 export default class Docs {
   render() {
-    const { box, boxId, dispatch, docs } = this.props;
+    const { box, boxId, dispatch, docs, width } = this.props;
     const addDoc = () => dispatch(actions.add({boxId}))
 
     return (
-      <Panel style={style.panel}>
+      <Panel style={style.panel} width={width}>
         <BoxPosition box={box} style={style.boxPosition} />
         <Tools addDoc={addDoc} />
         <List docs={docs} />

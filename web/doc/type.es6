@@ -9,10 +9,10 @@ import View from './view';
 }))
 export default class Doc {
   render() {
-    const { doc } = this.props;
+    const { doc, width } = this.props;
 
     return (
-      <Panel style={style.panel}>
+      <Panel style={style.panel} width={width}>
         <View doc={doc} />
       </Panel>
     );

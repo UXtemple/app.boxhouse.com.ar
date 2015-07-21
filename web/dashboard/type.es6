@@ -7,15 +7,13 @@ import List from '../companies/list';
 import React, { PropTypes } from 'react';
 import Tools from './tools';
 
-@connect(state => ({
-  companies: list(state.companies)
-}))
+@connect(state => ({companies: list(state.companies)}))
 export default class Dashboard {
   render() {
-    const { companies } = this.props;
+    const { companies, width } = this.props;
 
     return (
-      <Panel style={style.panel}>
+      <Panel style={style.panel} width={width}>
         <Title style={style.title}>Dashboard</Title>
         <Tools />
         <List companies={companies} />

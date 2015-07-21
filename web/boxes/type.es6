@@ -16,14 +16,14 @@ import Tools from './tools';
 }))
 export default class Boxes {
   render() {
-    const { company, boxes, dispatch } = this.props;
-    const addBox = () => dispatch(actions.add());
+    const { boxes, company, dispatch, width } = this.props;
+    const addBox = () => dispatch(actions.add({companyId: company.id}));
     const addDoc = boxId => () => dispatch(docActions.add({boxId}));
     const removeBox = id => () => dispatch(actions.remove(id));
     const toggleBoxFull = id => () => dispatch(actions.toggleBoxFull(id));
 
     return (
-      <Panel style={style}>
+      <Panel style={style} width={width}>
         <CompanyProfileCard company={company} />
         <Tools add={addBox} />
         <List addDoc={addDoc} boxes={boxes} removeBox={removeBox} toggleBoxFull={toggleBoxFull} />

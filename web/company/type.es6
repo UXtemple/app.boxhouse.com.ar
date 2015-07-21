@@ -7,10 +7,10 @@ import React, { PropTypes } from 'react';
 @connect((state, {companyId}) => ({company: state.companies[companyId]}))
 export default class CompanyProfile {
   render() {
-    const { company } = this.props;
+    const { company, width } = this.props;
 
     return (
-      <Panel style={style.panel}>
+      <Panel style={style.panel} width={width}>
         <Title style={style.profile}>Profile</Title>
         <div>Name: {company.name}</div>
         <div>Uri: {company.uri}</div>
