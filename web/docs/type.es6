@@ -41,8 +41,9 @@ const style = {
   },
   boxPosition: {
     color: 'white',
+    display: 'flex',
     fontSize: 25,
     justifyContent: 'center',
-    marginTop: 25
+    margin: '25px 0 0 10px'
   }
 };
