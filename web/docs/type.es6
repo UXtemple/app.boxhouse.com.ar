@@ -41,7 +41,7 @@ const style = {
   },
   boxPosition: {
     color: 'white',
-    fontSize: 30,
+    fontSize: 25,
     justifyContent: 'center',
     marginTop: 25
   }

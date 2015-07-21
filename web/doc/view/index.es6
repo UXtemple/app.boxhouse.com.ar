@@ -19,8 +19,8 @@ export default class DocView extends Component {
 
     return (
       <div style={{width: '100%'}}>
-        <div style={{flexDirection: 'row', alignItems: 'center', margin: '25px 20px 0'}}>
-          <HeaderTitle style={{flex: 1, textAlign: 'center', marginLeft: 70}} />
+        <div style={{ flexDirection: 'row', alignItems: 'center', margin: '25px 20px 0'}}>
+          <HeaderTitle style={{flex: 1, textAlign: 'center', marginLeft: 75}} />
           <button style={style.button[disabled ? 'editable' : 'saved']} onClick={toggleDisabled}>
             {disabled ? 'edit' : 'save'}
           </button>
@@ -48,6 +48,7 @@ const style = {
       fontWeight: 400,
       height: 30,
       outline: 0,
+      marginRight: 25,
       textTransform: 'uppercase',
       width: 60
     },
@@ -62,6 +63,7 @@ const style = {
       fontWeight: 400,
       height: 30,
       outline: 0,
+      marginRight: 25,
       textTransform: 'uppercase',
       width: 60
     }
