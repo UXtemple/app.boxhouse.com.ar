@@ -11,7 +11,7 @@ export default class CompanyProfile {
 
     return (
       <Panel style={style.panel}>
-        <Title style={{fontSize: 25}}>Profile</Title>
+        <Title style={style.profile}>Profile</Title>
         <div>Name: {company.name}</div>
         <div>Uri: {company.uri}</div>
       </Panel>
@@ -27,5 +27,12 @@ export default class CompanyProfile {
 const style = {
   panel: {
     backgroundColor: '#00b3e3'
-  }
+  },
+  profile: {
+    alignSelf: 'center',
+    color: 'white',
+    fontSize: 25,
+    margin: '25px 0 0 0',
+    padding: 0
+  },
 };
