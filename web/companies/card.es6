@@ -10,10 +10,7 @@ export default class CompanyCard {
     return (
       <Action href={company.uri} style={style.action}>
         {active => (
-          <div style={{alignItems: 'center', flexDirection: 'row'}}>
-            <div style={style.name}>{company.name}</div>
-            <ArrowIcon fill={style.icon[active ? 'active' : 'base']} />
-          </div>
+          <div style={{alignSelf: 'center'}}>{company.name}</div>
         )}
       </Action>
     );
@@ -27,26 +24,14 @@ export default class CompanyCard {
 const style = {
   action: {
     base: {
-      // alignSelf: 'center',
-      alignItems: 'center',
+      alignSelf: 'center',
       color: '#F7E4BF',
       flexDirection: 'row',
       fontSize: 30,
-      //justifyContent: 'center',
-      marginTop: 25,
-      width: 'auto',
-      padding: '0 20px 0 50px'
+      marginTop: 25
     },
     active: {
       color: 'rgba(247,228,191,0.3)'
     }
-  },
-  icon: {
-    active: 'rgba(247,228,191,0.3)',
-    base: '#F7E4BF'
-  },
-  name: {
-    flex: 1,
-    textAlign: 'center'
   }
 }
