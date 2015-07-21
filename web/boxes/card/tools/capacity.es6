@@ -22,6 +22,6 @@ export default class Capacity {
 
 const style = {
   cursor: 'pointer',
-  fontWeight: 300,
-  fontSize: 13
+  fontWeight: 400,
+  fontSize: 12
 };

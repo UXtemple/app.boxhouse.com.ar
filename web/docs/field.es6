@@ -46,7 +46,8 @@ const style = {
   label: {
     color: '#00bd70',
     display: 'block',
-    fontSize: 13,
+    fontSize: 12,
+    fontWeight: 400,
     textTransform: 'uppercase'
   },
   value: {

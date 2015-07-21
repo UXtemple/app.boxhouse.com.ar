@@ -19,7 +19,7 @@ export default class DocView extends Component {
 
     return (
       <div style={{width: '100%'}}>
-        <div style={{flexDirection: 'row', margin: '25px 20px 0'}}>
+        <div style={{flexDirection: 'row', alignItems: 'center', margin: '25px 20px 0'}}>
           <HeaderTitle style={{flex: 1, textAlign: 'center', marginLeft: 70}} />
           <button style={style.button[disabled ? 'editable' : 'saved']} onClick={toggleDisabled}>
             {disabled ? 'edit' : 'save'}
@@ -40,24 +40,30 @@ const style = {
     editable: {
       background: 'none',
       borderColor: '#00bd70',
-      borderRadius: 20,
+      borderRadius: 15,
       borderStyle: 'solid',
-      borderWidth: 1,
+      borderWidth: 2,
       color: '#00bd70',
+      fontSize: 12,
+      fontWeight: 400,
+      height: 30,
       outline: 0,
       textTransform: 'uppercase',
-      width: 70
+      width: 60
     },
     saved: {
       background: '#00bd70',
       borderStyle: 'solid',
       borderColor: '#00bd70',
-      borderWidth: 1,
-      borderRadius: 20,
+      borderWidth: 1.5,
+      borderRadius: 15,
       color: 'white',
+      fontSize: 12,
+      fontWeight: 400,
+      height: 30,
       outline: 0,
       textTransform: 'uppercase',
-      width: 70
+      width: 60
     }
   }
 }

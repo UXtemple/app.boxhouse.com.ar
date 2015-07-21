@@ -41,8 +41,8 @@ const style = {
       lineHeight: '50px'
     },
     label: {
-      fontSize: 13,
-      fontWeight: 300,
+      fontSize: 12,
+      fontWeight: 400,
       textTransform: 'uppercase'
     },
     wrapper: {
