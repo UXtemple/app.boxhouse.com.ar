@@ -38,7 +38,7 @@ const style = {
   title: {
     alignSelf: 'center',
     color: 'white',
-    fontSize: 30,
+    fontSize: 25,
     margin: '25px 0px 0px'
   }
 };

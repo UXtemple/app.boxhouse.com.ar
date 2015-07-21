@@ -26,7 +26,7 @@ const style = {
       alignSelf: 'center',
       color: '#F7E4BF',
       flexDirection: 'row',
-      fontSize: 30,
+      fontSize: 25,
       marginTop: 25
     },
     active: {

@@ -11,7 +11,7 @@ export default class CompanyProfile {
 
     return (
       <Panel style={style.panel}>
-        <Title>Profile</Title>
+        <Title style={{fontSize: 25}}>Profile</Title>
         <div>Name: {company.name}</div>
         <div>Uri: {company.uri}</div>
       </Panel>

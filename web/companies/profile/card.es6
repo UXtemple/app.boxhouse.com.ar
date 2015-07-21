@@ -31,7 +31,7 @@ const style = {
       alignItems: 'center',
       color: '#00b3e3',
       flexDirection: 'row',
-      fontSize: 30,
+      fontSize: 25,
       margin: '25px 50px 0px 51px',
       padding: 0,
       width: 'auto'

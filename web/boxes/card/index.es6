@@ -50,6 +50,7 @@ const style = {
   },
   position: {
     backgroundColor: 'white',
-    padding: '10px 0 10px 25px'
+    fontSize: 14,
+    padding: '5px 0 5px 25px'
   }
 }
