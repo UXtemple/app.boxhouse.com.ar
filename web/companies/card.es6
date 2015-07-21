@@ -1,5 +1,4 @@
 import { Action } from 'panels-blocks';
-import ArrowIcon from '../icons/arrow';
 import companyShape from '../company/shape';
 import React from 'react';
 

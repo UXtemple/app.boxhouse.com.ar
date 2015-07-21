@@ -1,5 +1,4 @@
 import { Action } from 'panels-blocks';
-import ArrowIcon from '../../icons/arrow';
 import boxShape from '../shape';
 import React, { PropTypes } from 'react';
 
@@ -11,9 +10,8 @@ export default class BoxCardAction {
       <Action href={box.id} style={style.action}>
         <div style={style.documentCount.wrapper}>
           <div style={style.documentCount.number}>{documentCount}</div>
-          <div style={style.documentCount.label}>documents inside</div>
+          <div style={style.documentCount.label}>documents</div>
         </div>
-        <ArrowIcon />
       </Action>
     );
   }
