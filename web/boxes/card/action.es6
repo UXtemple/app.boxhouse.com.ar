@@ -8,9 +8,9 @@ export default class BoxCardAction {
 
     return (
       <Action href={box.id} style={style.action}>
-        <div style={style.documentCount.wrapper}>
-          <div style={style.documentCount.number}>{documentCount}</div>
-          <div style={style.documentCount.label}>documents</div>
+        <div style={style.open.wrapper}>
+          <div style={style.open.button}>OPEN</div>
+          <div style={style.open.count}>1000 doc's inside</div>
         </div>
       </Action>
     );
@@ -32,20 +32,31 @@ const style = {
     active: {},
     base: {
       alignItems: 'center',
-      padding: 25
+      padding: '40px 20px 30px 20px'
     }
   },
-  documentCount: {
-    number: {
-      fontSize: 50,
-      lineHeight: '50px'
-    },
-    label: {
+  open: {
+    button: {
+      background: 'none',
+      borderColor: 'white',
+      borderRadius: 15,
+      borderStyle: 'solid',
+      borderWidth: 2,
       fontSize: 12,
       fontWeight: 400,
-      textTransform: 'uppercase'
+      height: 30,
+      padding: '4px 0',
+      textAlign: 'center',
+      width: 60
+    },
+    count: {
+      fontSize: 12,
+      fontWeight: 400,
+      textTransform: 'uppercase',
+      marginTop: 10
     },
     wrapper: {
+      alignItems: 'center',
       color: 'white',
       flexDirection: 'column',
       flex: 1

@@ -31,7 +31,7 @@ export default class BoxTools {
 const style = {
   tools: {
     //borderTop: '1px solid rgba(255,255,255,0.3)',
-    //margin: '0px 5px',
+    margin: '0px 5px',
     flexDirection: 'row',
     alignItems: 'stretch',
     justifyContent: 'space-between'
@@ -39,7 +39,7 @@ const style = {
   tool: {
     //alignContent: 'center',
     alignItems: 'center',
-    padding: '25px 0',
+    padding: '20px 0px',
     width: '30%'
   }
 }
