@@ -30,6 +30,9 @@
   "homepage": "https://github.com/UXtemple/boxhouse",
   "dependencies": {
     "invariant": "^2.1.0",
+    "koa": "^0.21.0",
+    "koa-compress": "^1.0.8",
+    "koa-html-minifier": "^1.0.1",
     "node-uuid": "^1.4.3",
     "panels-blocks": "^0.3.1",
     "panels-runtime": "^0.5.0",
