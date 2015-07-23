@@ -40,10 +40,12 @@ const style = {
     paddingBottom: 100
   },
   boxPosition: {
+    alignItems: 'center',
     color: 'white',
     display: 'flex',
     fontSize: 25,
     justifyContent: 'center',
-    margin: '25px 0 0 10px'
+    margin: '25px 0 0 0',
+    padding: '0 0 0 10px'
   }
 };

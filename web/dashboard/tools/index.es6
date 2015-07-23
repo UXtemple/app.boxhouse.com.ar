@@ -18,6 +18,6 @@ const style = {
   justifyContent: 'space-between',
   flexDirection: 'row',
   alignItems: 'center',
-  margin: '25px 0 25px 0',
+  margin: '25px 0 40px 0',
   width: 80
 }
