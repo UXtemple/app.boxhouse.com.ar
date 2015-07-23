@@ -16,7 +16,7 @@ import Tools from './tools';
 export default class Docs {
   render() {
     const { box, boxId, dispatch, docs, width } = this.props;
-    const addDoc = () => dispatch(actions.add({boxId}))
+    const addDoc = () => dispatch(actions.add({boxId}));
 
     return (
       <Panel style={style.panel} width={width}>

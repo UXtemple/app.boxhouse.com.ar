@@ -24,11 +24,11 @@ export default {
     loaders: [{
       test: /\.es6$/,
       loaders: ['react-hot', 'babel'],
-      exclude: /node_modules|blocks|runtime|ui/
+      exclude: /node_modules|blocks|runtime|ui|router/
     }, {
       test: /\.es6$/,
       loader: 'babel',
-      include: /panels\/[blocks|runtime|ui]/
+      include: /blocks|runtime|ui|router/
     }]
   }
 };
